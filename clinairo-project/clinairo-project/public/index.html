@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clinairo — AI Front Desk Automation for Private Clinics</title>
+<meta name="description" content="Clinairo's AI Front Desk answers every patient call, books every appointment, and recovers missed-call revenue for private clinics — 24/7, HIPAA compliant, no extra staff.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<style>
+  :root {
+    --navy: #0A1420;
+    --navy-2: #0F1D30;
+    --navy-3: #142238;
+    --white: #F7F9FC;
+    --muted: #93A1B8;
+    --accent: #3E9DFF;
+    --accent-dim: rgba(62,157,255,0.15);
+    --green: #34D399;
+    --green-dim: rgba(52,211,153,0.14);
+    --red: #F87171;
+    --red-dim: rgba(248,113,113,0.14);
+    --border: rgba(255,255,255,0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+    overflow-x: hidden;
+  }
+  a { color: inherit; }
+  .section { max-width: 1200px; margin: 0 auto; padding: 100px 40px; }
+  .eyebrow {
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  h2 { font-size: 38px; font-weight: 700; letter-spacing: -0.8px; margin-bottom: 16px; }
+  .section-sub { color: var(--muted); font-size: 16px; max-width: 560px; margin-bottom: 60px; line-height: 1.6; }
+  .center { text-align: center; margin-left: auto; margin-right: auto; }
+
+  /* ---------- HEADER ---------- */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 40px;
+    background: rgba(10,20,32,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; }
+  nav { display: flex; gap: 32px; align-items: center; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; }
+  nav a.active { color: var(--white); }
+  .burger-btn { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 34px; height: 34px; background: none; border: none; cursor: pointer; padding: 0; }
+  .burger-btn span { display: block; width: 100%; height: 2px; background: var(--white); border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; }
+  .burger-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger-btn.open span:nth-child(2) { opacity: 0; }
+  .burger-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .cta-btn {
+    background: var(--accent); color: #fff; border: none;
+    padding: 10px 22px; border-radius: 8px; font-size: 14px; font-weight: 600;
+    cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; white-space: nowrap;
+    display: inline-block; text-decoration: none; text-align: center;
+  }
+  .cta-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(62,157,255,0.3); }
+  .cta-btn.green { background: var(--green); }
+
+  .hipaa-badge {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 600;
+    color: var(--green); background: var(--green-dim); border: 1px solid rgba(52,211,153,0.35);
+    padding: 7px 16px; border-radius: 999px; text-decoration: none; cursor: pointer;
+    margin-bottom: 18px; transition: transform 0.2s ease, background 0.2s ease;
+  }
+  .hipaa-badge:hover { transform: translateY(-1px); background: rgba(52,211,153,0.22); }
+
+  
+  /* ---------- HERO ---------- */
+  .hero {
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 1200px; margin: 0 auto; padding: 22px 40px 40px; gap: 60px;
+  }
+  .hero-text { flex: 1; max-width: 520px; }
+  h1 { font-size: 48px; line-height: 1.1; font-weight: 700; letter-spacing: -1px; margin-bottom: 20px; }
+  .hero-text p { color: var(--muted); font-size: 17px; line-height: 1.6; margin-bottom: 32px; }
+  .hero-cta { display: flex; gap: 16px; align-items: center; }
+  .secondary-link { font-size: 14px; text-decoration: underline; text-underline-offset: 4px; opacity: 0.7; }
+
+  .phone-wrap { flex-shrink: 0; position: relative; }
+  .phone {
+    width: 290px; height: 560px;
+    background: linear-gradient(160deg, #131F30, #0B1522);
+    border-radius: 36px; border: 2px solid var(--accent);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.03), 0 0 30px rgba(62,157,255,0.25);
+    padding: 20px 16px; position: relative; overflow: hidden;
+  }
+  .phone::before {
+    content: ''; position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+    width: 60px; height: 5px; background: rgba(255,255,255,0.15); border-radius: 3px;
+  }
+  .chat-header { display: flex; align-items: center; gap: 10px; padding: 18px 4px 14px; border-bottom: 1px solid var(--border); margin-bottom: 14px; }
+  .chat-avatar { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #1E5FBF); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; }
+  .chat-title { font-size: 13px; font-weight: 600; }
+  .chat-status { font-size: 11px; color: var(--green); }
+  .chat-body { display: flex; flex-direction: column; gap: 10px; min-height: 380px; }
+  .bubble { max-width: 80%; padding: 10px 14px; border-radius: 16px; font-size: 13px; line-height: 1.4; opacity: 0; transform: translateY(16px) scale(0.96); transition: opacity 0.4s ease, transform 0.4s ease; }
+  .bubble.show { opacity: 1; transform: translateY(0) scale(1); }
+  .bubble.patient { align-self: flex-end; background: var(--accent); color: #fff; border-bottom-right-radius: 4px; }
+  .bubble.ai { align-self: flex-start; background: rgba(255,255,255,0.08); color: var(--white); border-bottom-left-radius: 4px; }
+  .typing { align-self: flex-start; display: flex; gap: 4px; padding: 12px 16px; background: rgba(255,255,255,0.08); border-radius: 16px; border-bottom-left-radius: 4px; opacity: 0; transition: opacity 0.3s ease; width: fit-content; }
+  .typing.show { opacity: 1; }
+  .typing span { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); animation: bounce 1s infinite ease-in-out; }
+  .typing span:nth-child(2) { animation-delay: 0.15s; }
+  .typing span:nth-child(3) { animation-delay: 0.3s; }
+  @keyframes bounce { 0%, 60%, 100% { transform: translateY(0); opacity: 0.4; } 30% { transform: translateY(-4px); opacity: 1; } }
+  .confirm-card { position: absolute; bottom: -80px; left: 16px; right: 16px; background: var(--green-dim); border: 1px solid rgba(52,211,153,0.4); border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; gap: 10px; opacity: 0; transition: bottom 0.5s cubic-bezier(0.34,1.56,0.64,1), opacity 0.5s ease; }
+  .confirm-card.show { bottom: 16px; opacity: 1; }
+  .check-circle { width: 24px; height: 24px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; color: #0A1420; font-weight: 700; }
+  .confirm-card span { font-size: 13px; font-weight: 600; }
+  .ambient-ring { position: absolute; border-radius: 50%; border: 1px solid var(--accent); opacity: 0; top: 50%; left: 50%; transform: translate(-50%, -50%); animation: ring-pulse 3s infinite ease-out; }
+  .ambient-ring:nth-child(2) { animation-delay: 1s; }
+  @keyframes ring-pulse { 0% { width: 340px; height: 340px; opacity: 0.3; } 100% { width: 500px; height: 500px; opacity: 0; } }
+
+  .stat { text-align: center; }
+  .stat-num { font-size: 30px; font-weight: 700; color: var(--green); margin-bottom: 4px; }
+  .stat-label { font-size: 13px; color: var(--muted); font-weight: 500; }
+
+  /* ---------- PROCESS ---------- */
+  .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .process-card { position: relative; padding-top: 10px; opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .process-card.in-view { opacity: 1; transform: translateY(0); }
+  .process-num { font-size: 34px; font-weight: 800; color: var(--accent); opacity: 0.35; margin-bottom: 10px; }
+  .process-card h4 { font-size: 16px; margin-bottom: 8px; }
+  .process-card p { font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .testi-card { background: var(--navy-3); border: 1px solid var(--border); border-radius: 16px; padding: 26px; opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease; position: relative; }
+  .testi-card.in-view { opacity: 1; transform: translateY(0); }
+  .testi-quote { font-size: 14px; color: var(--white); line-height: 1.6; margin-bottom: 20px; }
+  .testi-author { display: flex; align-items: center; gap: 12px; }
+  .testi-avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--green)); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; }
+  .testi-name { font-size: 13px; font-weight: 700; }
+  .testi-role { font-size: 12px; color: var(--muted); }
+  .testi-placeholder-note { font-size: 12px; color: var(--muted); margin-top: 24px; font-style: italic; }
+
+  /* ---------- FAQ ---------- */
+  .faq-list { max-width: 720px; }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; cursor: pointer; font-size: 15px; font-weight: 600; }
+  .faq-q .plus { font-size: 18px; color: var(--accent); transition: transform 0.3s ease; }
+  .faq-item.open .plus { transform: rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+  .faq-a p { font-size: 13.5px; color: var(--muted); line-height: 1.6; padding-bottom: 20px; max-width: 620px; }
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 50px; align-items: start; }
+  .contact-info h3 { font-size: 22px; margin-bottom: 12px; }
+  .contact-info p { color: var(--muted); font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
+  .contact-email { color: var(--accent); font-size: 15px; font-weight: 600; }
+  .contact-form { background: var(--navy-3); border: 1px solid var(--border); border-radius: 18px; padding: 32px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
+  .form-group input, .form-group textarea {
+    width: 100%; background: var(--navy-2); border: 1px solid var(--border); border-radius: 8px;
+    padding: 11px 14px; color: var(--white); font-size: 14px; font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(62,157,255,0.15); }
+  .form-group textarea { resize: vertical; min-height: 90px; }
+  .submit-btn { width: 100%; margin-top: 6px; padding: 13px; }
+  .form-success { display: none; align-items: center; gap: 10px; background: var(--green-dim); border: 1px solid rgba(52,211,153,0.4); border-radius: 10px; padding: 14px 16px; margin-top: 14px; font-size: 13.5px; }
+  .form-success.show { display: flex; }
+
+  /* ---------- PROBLEMS WE SOLVE ---------- */
+  .problems-outer { background: var(--navy-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); position: relative; }
+  .problem-row {
+    display: grid; grid-template-columns: 1fr 40px 1fr; align-items: center; gap: 20px;
+    padding: 18px 24px; border-radius: 14px; background: var(--navy-3); border: 1px solid var(--border);
+    margin-bottom: 14px; opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .problem-row.in-view { opacity: 1; transform: translateY(0); }
+  .problem-side { display: flex; align-items: center; gap: 12px; }
+  .problem-side .tag-icon { font-size: 18px; flex-shrink: 0; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+  .problem-side.problem .tag-icon { background: var(--red-dim); }
+  .problem-side.solution .tag-icon { background: var(--green-dim); }
+  .problem-side p { font-size: 14px; line-height: 1.4; }
+  .problem-side.problem p { color: var(--muted); }
+  .problem-side.solution p { color: var(--white); font-weight: 500; }
+  .arrow-mid { text-align: center; color: var(--accent); font-size: 18px; }
+
+  /* ---------- DIAGRAM SECTION ---------- */
+  .diagram-outer { background: var(--navy-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .diagram-grid { display: grid; grid-template-columns: 220px 1fr 220px; gap: 20px; align-items: center; position: relative; min-height: 560px; }
+  .side-col { display: flex; flex-direction: column; gap: 18px; z-index: 2; }
+  .side-col.right { align-items: flex-end; }
+  .side-label { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .chip {
+    background: var(--navy-3); border: 1px solid var(--border); border-radius: 12px;
+    padding: 12px 14px; font-size: 13px; display: flex; align-items: center; gap: 10px;
+    width: 100%; opacity: 0; transform: translateX(-14px); transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .side-col.right .chip { transform: translateX(14px); }
+  .chip.in-view { opacity: 1; transform: translateX(0); }
+  .chip-icon { font-size: 16px; flex-shrink: 0; }
+  .hub-area { position: relative; height: 560px; display: flex; align-items: center; justify-content: center; }
+  .hub-core {
+    width: 130px; height: 130px; border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #1a2c46, #0d1626);
+    border: 1px solid rgba(62,157,255,0.4);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    z-index: 3; position: relative;
+  }
+  .hub-core .glow {
+    position: absolute; inset: -18px; border-radius: 50%;
+    border: 1px solid var(--accent); opacity: 0.5;
+    animation: hub-pulse 2.2s infinite ease-in-out;
+  }
+  @keyframes hub-pulse { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.08); opacity: 0.1; } }
+  .hub-core b { font-size: 16px; font-weight: 700; }
+  .hub-core small { color: var(--muted); font-size: 10px; margin-top: 2px; }
+  .feature-node {
+    position: absolute; width: 108px; text-align: center; font-size: 11px; font-weight: 600;
+    color: var(--white); opacity: 0; transition: opacity 0.6s ease;
+  }
+  .feature-node.in-view { opacity: 1; }
+  .feature-node .fi { font-size: 18px; display: block; margin-bottom: 4px; }
+  svg.connector-svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+  .connector-line { fill: none; stroke-width: 1.5; stroke-linecap: round; transition: stroke-dashoffset 1.4s ease; }
+  .particle { fill: var(--accent); }
+  .particle.out { fill: var(--green); }
+
+  .results-strip { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 50px; }
+
+  /* ---------- AUDIT CALCULATOR ---------- */
+  .audit-card { max-width: 840px; margin: 0 auto; background: var(--navy-3); border: 1px solid var(--border); border-radius: 22px; padding: 40px; position: relative; }
+  .audit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .audit-field label { display: block; font-size: 12.5px; color: var(--muted); margin-bottom: 8px; font-weight: 600; }
+  .audit-field input {
+    width: 100%; background: var(--navy-2); border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 14px; color: var(--white); font-size: 15px; font-weight: 600; font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .audit-field input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(62,157,255,0.15); }
+  .audit-results { max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.6s ease, opacity 0.5s ease; margin-top: 0; }
+  .audit-results.show { max-height: 900px; opacity: 1; margin-top: 34px; }
+  .audit-results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding-top: 30px; border-top: 1px solid var(--border); }
+  .audit-stat { background: var(--navy-2); border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; }
+  .audit-stat.featured { border-color: var(--red); background: rgba(248,113,113,0.06); }
+  .audit-stat-label { font-size: 12px; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+  .audit-stat-val { font-size: 22px; font-weight: 800; color: var(--white); }
+  .audit-stat-val.red { color: var(--red); }
+  .audit-stat-val.big { font-size: 28px; }
+  .audit-cta-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-top: 26px; background: rgba(52,211,153,0.06); border: 1px solid rgba(52,211,153,0.3); border-radius: 14px; padding: 20px 24px; }
+  .audit-cta-row p { font-size: 14px; color: var(--white); max-width: 420px; line-height: 1.5; }
+  .audit-disclaimer { font-size: 12px; color: var(--muted); margin-top: 14px; text-align: center; }
+  .pill { background: var(--navy-3); border: 1px solid var(--border); border-radius: 999px; padding: 10px 20px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+  .pill.blue { color: var(--accent); }
+  .pill.green { color: var(--green); }
+
+  /* ---------- REVENUE SECTION ---------- */
+  .revenue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+  .rev-card { background: var(--navy-3); border: 1px solid var(--border); border-radius: 18px; padding: 32px; min-height: 300px; position: relative; overflow: hidden; }
+  .rev-label { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 24px; }
+  .rev-label.without { color: var(--red); }
+  .rev-label.with { color: var(--green); }
+  .rev-phone-icon { font-size: 34px; display: inline-block; margin-bottom: 16px; }
+  .rev-phone-icon.ringing { animation: ring 0.7s infinite; }
+  @keyframes ring { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-12deg); } 75% { transform: rotate(12deg); } }
+  .missed-tag { display: inline-block; background: var(--red-dim); color: var(--red); border: 1px solid rgba(248,113,113,0.4); padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 20px; opacity: 0; transition: opacity 0.5s ease; }
+  .missed-tag.show { opacity: 1; }
+  .lost-counter { font-size: 30px; font-weight: 700; color: var(--red); margin-bottom: 6px; }
+  .lost-sub, .gain-sub { font-size: 13px; color: var(--muted); }
+  .booked-tag { display: inline-block; background: var(--green-dim); color: var(--green); border: 1px solid rgba(52,211,153,0.4); padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 20px; opacity: 0; transform: scale(0.7); transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34,1.56,0.64,1); }
+  .booked-tag.show { opacity: 1; transform: scale(1); }
+  .cal-wipe { width: 100%; height: 10px; background: var(--border); border-radius: 6px; overflow: hidden; margin: 20px 0; }
+  .cal-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--green), #6EE7B7); transition: width 1s ease; }
+  .loss-wipe { width: 100%; height: 10px; background: var(--border); border-radius: 6px; overflow: hidden; margin: 20px 0; }
+  .loss-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--red), #FCA5A5); transition: width 1s ease; }
+  .gain-counter { font-size: 30px; font-weight: 700; color: var(--green); margin-bottom: 6px; }
+
+  /* ---------- TRUST SECTION ---------- */
+  .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .trust-card { background: var(--navy-3); border: 1px solid var(--border); border-radius: 16px; padding: 26px; opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .trust-card.in-view { opacity: 1; transform: translateY(0); }
+  .trust-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--green-dim); display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 16px; color: var(--green); }
+  .trust-card h4 { font-size: 15px; margin-bottom: 8px; }
+  .trust-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  /* ---------- DIFFERENTIATOR ---------- */
+  .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .diff-card { border: 1px solid var(--border); border-radius: 16px; padding: 28px; background: linear-gradient(160deg, rgba(62,157,255,0.06), transparent); }
+  .diff-card h4 { font-size: 17px; margin-bottom: 10px; }
+  .diff-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+  footer { border-top: 1px solid var(--border); padding: 50px 40px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a { color: var(--muted); font-size: 13px; text-decoration: none; }
+  .footer-copy { color: var(--muted); font-size: 13px; }
+
+  @media (max-width: 900px) {
+    .hero { flex-direction: column; padding-top: 50px; }
+    .diagram-grid { grid-template-columns: 1fr; }
+    .hub-area { height: 420px; }
+    .side-col.right { align-items: flex-start; }
+    .revenue-grid, .trust-grid, .diff-grid { grid-template-columns: 1fr; }
+    .process-grid, .testi-grid { grid-template-columns: 1fr; }
+    .audit-grid { grid-template-columns: 1fr; }
+    .audit-results-grid { grid-template-columns: 1fr; }
+    .audit-cta-row { flex-direction: column; text-align: center; }
+    .problem-row { grid-template-columns: 1fr; text-align: left; }
+    .arrow-mid { transform: rotate(90deg); margin: 4px 0; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .burger-btn { display: flex; }
+    nav#mainNav {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0;
+      background: rgba(10,20,32,0.98); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      max-height: 0; overflow: hidden; opacity: 0;
+      transition: max-height 0.35s ease, opacity 0.3s ease;
+    }
+    nav#mainNav.open { max-height: 420px; opacity: 1; }
+    nav#mainNav a { padding: 16px 24px; border-bottom: 1px solid var(--border); font-size: 15px; }
+    nav#mainNav a.cta-btn { margin: 16px 24px; text-align: center; border-bottom: none; }
+    h1 { font-size: 34px; }
+  }
+
+/* ---------- PREMIUM FOOTER ---------- */
+.footer-cta-col .cta-btn, .footer-cta-col .cta-btn:hover, .footer-cta-col .cta-btn:visited { color: #ffffff !important; opacity: 1 !important; }
+.footer-spacer { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+.footer-spacer .line { height: 1px; background: linear-gradient(90deg, transparent, var(--border) 20%, var(--border) 80%, transparent); margin: 60px 0 0; }
+
+.site-footer { border-top: 1px solid var(--border); background: var(--navy-2); padding: 70px 40px 0; }
+.footer-top { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 50px; padding-bottom: 50px; }
+.footer-brand .logo { font-size: 22px; margin-bottom: 14px; display: inline-block; }
+.footer-brand p { font-size: 13.5px; color: var(--muted); line-height: 1.6; max-width: 280px; margin-bottom: 20px; }
+.footer-social { display: flex; gap: 10px; }
+.footer-social a { width: 34px; height: 34px; border-radius: 9px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--accent) !important; text-decoration: none; transition: background 0.2s ease, color 0.2s ease; }
+.footer-social a:hover { background: var(--accent); color: #fff !important; }
+.footer-col h4 { font-size: 12.5px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+.footer-col a { display: block; font-size: 14px; color: var(--white); opacity: 0.85; text-decoration: none; margin-bottom: 12px; transition: opacity 0.2s ease; }
+.footer-col a:hover { opacity: 1; color: var(--accent); }
+.footer-cta-col p { font-size: 13.5px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+.footer-cta-col .cta-btn { width: 100%; margin-bottom: 14px; }
+.footer-cta-email { font-size: 13px; color: var(--accent); text-decoration: none; }
+.footer-bottom { max-width: 1200px; margin: 0 auto; border-top: 1px solid var(--border); padding: 24px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+.footer-copy { font-size: 12.5px; color: var(--muted); }
+.footer-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+.footer-badge { font-size: 11px; font-weight: 600; color: var(--muted); background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: 5px 11px; border-radius: 999px; display: flex; align-items: center; gap: 5px; }
+
+@media (max-width: 900px) {
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+@media (max-width: 560px) {
+  .footer-top { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Clinairo</div>
+  <nav id="mainNav">
+    <a href="index.html" class="active">Home</a>
+    <a href="features.html">Features</a>
+    <a href="services.html">Services</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="cta-btn">Book Free Consultation</a>
+  </nav>
+  <button class="burger-btn" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <a href="#trust" class="hipaa-badge">🛡️ HIPAA Compliant — See Our Compliance</a>
+    <div class="eyebrow">Free Revenue Loss Audit for Clinics</div>
+    <h1>Your Clinic Is Losing Revenue Every Time a Call Goes Unanswered</h1>
+    <p>Missed calls, no after-hours coverage, and slow follow-ups quietly cost private clinics thousands in lost bookings every month. See exactly what it's costing you — then see how Clinairo closes the gap, 24/7.</p>
+    <div class="hero-cta">
+      <a href="#audit" class="cta-btn">See How Much You're Losing</a>
+      <a href="contact.html" class="secondary-link">Book Free Consultation</a>
+    </div>
+  </div>
+  <div class="phone-wrap">
+    <div class="ambient-ring"></div>
+    <div class="ambient-ring"></div>
+    <div class="phone">
+      <div class="chat-header">
+        <div class="chat-avatar">AI</div>
+        <div><div class="chat-title">Clinairo Assistant</div><div class="chat-status">● Online</div></div>
+      </div>
+      <div class="chat-body" id="chatBody"></div>
+      <div class="confirm-card" id="confirmCard"><div class="check-circle">✓</div><span>Appointment Confirmed</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMS WE SOLVE -->
+<div class="problems-outer">
+  <section class="section" style="padding-top:80px;padding-bottom:80px;">
+    <div class="eyebrow">Every Gap Costs You Money</div>
+    <h2>Missed Calls Are Just One Leak.<br>Here's Where the Rest of Your Revenue Goes.</h2>
+    <p class="section-sub">Every unanswered call, unhandled after-hours inquiry, and forgotten reminder is revenue walking out the door. Clinairo closes every one of these gaps.</p>
+
+    <div id="problemsList">
+      <div class="problem-row" data-i="0">
+        <div class="problem-side problem"><span class="tag-icon">📵</span><p>Phones ring after hours with no one to answer</p></div>
+        <div class="arrow-mid">→</div>
+        <div class="problem-side solution"><span class="tag-icon">📞</span><p>24/7 AI Voice Receptionist answers every call</p></div>
+      </div>
+      <div class="problem-row" data-i="1">
+        <div class="problem-side problem"><span class="tag-icon">☎️</span><p>Missed calls quietly turn into lost patients</p></div>
+        <div class="arrow-mid">→</div>
+        <div class="problem-side solution"><span class="tag-icon">📲</span><p>Missed Call Text-Back recovers every lead instantly</p></div>
+      </div>
+      <div class="problem-row" data-i="2">
+        <div class="problem-side problem"><span class="tag-icon">🔁</span><p>Back-and-forth scheduling wastes staff hours</p></div>
+        <div class="arrow-mid">→</div>
+        <div class="problem-side solution"><span class="tag-icon">📅</span><p>AI Appointment Scheduling books in real time</p></div>
+      </div>
+      <div class="problem-row" data-i="3">
+        <div class="problem-side problem"><span class="tag-icon">🚫</span><p>Patients forget appointments, causing no-shows</p></div>
+        <div class="arrow-mid">→</div>
+        <div class="problem-side solution"><span class="tag-icon">🔔</span><p>Automated reminders across SMS, WhatsApp & email</p></div>
+      </div>
+      <div class="problem-row" data-i="4">
+        <div class="problem-side problem"><span class="tag-icon">😩</span><p>Repetitive FAQ calls overload your front desk</p></div>
+        <div class="arrow-mid">→</div>
+        <div class="problem-side solution"><span class="tag-icon">📋</span><p>Patient FAQ Assistant answers instantly, 24/7</p></div>
+      </div>
+      <div class="problem-row" data-i="5">
+        <div class="problem-side problem"><span class="tag-icon">🧩</span><p>Patient data scattered across disconnected tools</p></div>
+        <div class="arrow-mid">→</div>
+        <div class="problem-side solution"><span class="tag-icon">🔄</span><p>CRM Synchronization keeps everything connected</p></div>
+      </div>
+      <div class="problem-row" data-i="6">
+        <div class="problem-side problem"><span class="tag-icon">📉</span><p>No visibility into daily call and booking performance</p></div>
+        <div class="arrow-mid">→</div>
+        <div class="problem-side solution"><span class="tag-icon">📊</span><p>Daily Operational Reports sent straight to you</p></div>
+      </div>
+      <div class="problem-row" data-i="7">
+        <div class="problem-side problem"><span class="tag-icon">💬</span><p>No easy way for patients to reach you by message</p></div>
+        <div class="arrow-mid">→</div>
+        <div class="problem-side solution"><span class="tag-icon">🟢</span><p>WhatsApp Patient Support handles it around the clock</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- HOW IT WORKS DIAGRAM -->
+<div class="diagram-outer" id="howitworks">
+  <section class="section">
+    <div class="eyebrow center">How It Works</div>
+    <h2 class="center">One AI System Handles Everything</h2>
+    <p class="section-sub center">Your team focuses on patients. Clinairo handles every call, message, booking, and follow-up in real time.</p>
+
+    <div class="diagram-grid" id="diagramGrid">
+      <div class="side-col" id="leftCol">
+        <div class="side-label">Patients</div>
+        <div class="chip" data-i="0"><span class="chip-icon">📞</span>Calling after hours</div>
+        <div class="chip" data-i="1"><span class="chip-icon">💬</span>Sending a WhatsApp message</div>
+        <div class="chip" data-i="2"><span class="chip-icon">☎️</span>Missed call</div>
+        <div class="chip" data-i="3"><span class="chip-icon">❓</span>Asking an FAQ question</div>
+        <div class="chip" data-i="4"><span class="chip-icon">📅</span>Needs an appointment reminder</div>
+      </div>
+
+      <div class="hub-area" id="hubArea">
+        <svg class="connector-svg" id="connectorSvg"></svg>
+        <div class="hub-core">
+          <div class="glow"></div>
+          <b>Clinairo</b>
+          <small>AI FRONT DESK</small>
+        </div>
+      </div>
+
+      <div class="side-col right" id="rightCol">
+        <div class="side-label">Your Clinic</div>
+        <div class="chip" data-i="0"><span class="chip-icon">🧑‍⚕️</span>Staff freed from repetitive calls</div>
+        <div class="chip" data-i="1"><span class="chip-icon">📆</span>Appointments booked automatically</div>
+        <div class="chip" data-i="2"><span class="chip-icon">🔔</span>Doctor notified of new bookings</div>
+        <div class="chip" data-i="3"><span class="chip-icon">📊</span>Daily performance report received</div>
+        <div class="chip" data-i="4"><span class="chip-icon">✅</span>Zero missed patient inquiries</div>
+      </div>
+    </div>
+
+    <div class="results-strip">
+      <div class="pill blue">📞 Zero Missed Calls</div>
+      <div class="pill blue">⏱ Instant Response — 24/7</div>
+      <div class="pill green">🤖 Full Automation — No Extra Staff</div>
+    </div>
+  </section>
+</div>
+
+<!-- FREE REVENUE AUDIT CALCULATOR -->
+<section class="section" id="audit">
+  <div class="eyebrow center">Free Revenue Audit</div>
+  <h2 class="center">Check Your Monthly Revenue Loss</h2>
+  <p class="section-sub center">Answer 5 quick questions about your clinic's call volume. We'll estimate what missed calls and after-hours gaps are actually costing you.</p>
+
+  <div class="audit-card">
+    <div class="audit-grid">
+      <div class="audit-field">
+        <label>Average patient calls per week</label>
+        <input type="number" id="auCalls" value="140" min="0">
+      </div>
+      <div class="audit-field">
+        <label>% of calls that go unanswered</label>
+        <input type="number" id="auMissedPct" value="20" min="0" max="100">
+      </div>
+      <div class="audit-field">
+        <label>After-hours calls per week (evenings/weekends)</label>
+        <input type="number" id="auAfterHours" value="15" min="0">
+      </div>
+      <div class="audit-field">
+        <label>Average appointment value ($)</label>
+        <input type="number" id="auApptValue" value="150" min="0">
+      </div>
+      <div class="audit-field">
+        <label>Est. booking rate for answered calls (%)</label>
+        <input type="number" id="auConvRate" value="35" min="0" max="100">
+      </div>
+    </div>
+    <button class="cta-btn submit-btn" id="auditBtn" style="max-width:340px;margin:26px auto 0;display:block;">Calculate My Revenue Loss</button>
+
+    <div class="audit-results" id="auditResults">
+      <div class="audit-results-grid">
+        <div class="audit-stat">
+          <div class="audit-stat-label">Lost Bookings / Month</div>
+          <div class="audit-stat-val" id="auOutBookings">0</div>
+        </div>
+        <div class="audit-stat">
+          <div class="audit-stat-label">Monthly Revenue Loss</div>
+          <div class="audit-stat-val red" id="auOutMonthly">$0</div>
+        </div>
+        <div class="audit-stat featured">
+          <div class="audit-stat-label">Annual Revenue Loss</div>
+          <div class="audit-stat-val red big" id="auOutAnnual">$0</div>
+        </div>
+      </div>
+      <div class="audit-cta-row">
+        <p>Clinairo recovers most of this by answering every call, day or night, and instantly following up on anything missed.</p>
+        <a href="contact.html" class="cta-btn green">Book Free Consultation</a>
+      </div>
+      <p class="audit-disclaimer">Estimate based on the figures you entered above — actual results vary by clinic, call patterns, and market.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVENUE RECOVERY -->
+<section class="section" id="revenue">
+  <div class="eyebrow">The Problem We Solve</div>
+  <h2>Every Missed Call Is Lost Revenue.<br>We Recover It.</h2>
+  <p class="section-sub">Clinics lose real bookings every time a call goes unanswered. Clinairo makes sure that never happens again — and shows you the impact.</p>
+
+  <div class="revenue-grid" id="revenueGrid">
+    <div class="rev-card">
+      <div class="rev-label without">Without Clinairo</div>
+      <div class="rev-phone-icon ringing">📞</div>
+      <div class="missed-tag" id="missedTag">Missed Call</div>
+      <div class="loss-wipe"><div class="loss-fill" id="lossFill"></div></div>
+      <div class="lost-counter" id="lostCounter">$0</div>
+      <div class="lost-sub">Estimated monthly revenue lost to unanswered calls</div>
+    </div>
+    <div class="rev-card">
+      <div class="rev-label with">With Clinairo</div>
+      <div class="rev-phone-icon" id="answeredIcon">📞</div>
+      <div class="booked-tag" id="bookedTag">✓ Booked Instantly</div>
+      <div class="cal-wipe"><div class="cal-fill" id="calFill"></div></div>
+      <div class="gain-counter" id="gainCounter">$0</div>
+      <div class="gain-sub">Estimated monthly revenue recovered</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST / COMPLIANCE -->
+<section class="section" id="trust" style="background:var(--navy-2);border-radius:28px;margin:24px auto;">
+  <div class="eyebrow">Compliance & Trust</div>
+  <h2>Fully HIPAA Compliant — Built for Healthcare from Day One</h2>
+  <p class="section-sub">Security and compliance aren't an afterthought — they're built into every layer of Clinairo.</p>
+  <div class="trust-grid" id="trustGrid">
+    <div class="trust-card"><div class="trust-icon">🛡️</div><h4>HIPAA Compliant Infrastructure</h4><p>Business Associate Agreements (BAAs) signed with every technology partner in our stack.</p></div>
+    <div class="trust-card"><div class="trust-icon">🔒</div><h4>Minimal Data Footprint</h4><p>We process only what's needed to book and confirm appointments — no clinical or diagnostic data stored.</p></div>
+    <div class="trust-card"><div class="trust-icon">🔐</div><h4>Encrypted End-to-End</h4><p>All patient communications are encrypted in transit and at rest.</p></div>
+    <div class="trust-card"><div class="trust-icon">📋</div><h4>Audit-Ready</h4><p>Full activity logs available for your compliance records, anytime.</p></div>
+  </div>
+</section>
+
+<!-- WHY DIFFERENT -->
+<section class="section" id="about">
+  <div class="eyebrow">Why Clinairo</div>
+  <h2>Built Differently From Everything Else on the Market</h2>
+  <p class="section-sub">Most vendors sell you disconnected pieces. Clinairo is one system, built specifically for private clinics — not enterprise health systems.</p>
+  <div class="diff-grid">
+    <div class="diff-card"><h4>One Unified System</h4><p>Not a chatbot here and a scheduler there — Clinairo owns the entire patient touchpoint from first call to confirmed visit.</p></div>
+    <div class="diff-card"><h4>Proven With Real Clinics</h4><p>Verified results from real, named clinicians using Clinairo in production — not mockups or simulated demos.</p></div>
+    <div class="diff-card"><h4>Built for Your Size</h4><p>Designed specifically for 5–50 person private practices — fast decisions, real operational pain, no enterprise bureaucracy.</p></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" id="process" style="background:var(--navy-2);border-radius:28px;margin:24px auto;">
+  <div class="eyebrow">The Process</div>
+  <h2>Four Steps to a Self-Running Front Desk</h2>
+  <p class="section-sub">Our onboarding team handles the heavy lifting so you can focus on your patients.</p>
+  <div class="process-grid" id="processGrid">
+    <div class="process-card"><div class="process-num">01</div><h4>Connect Your Clinic</h4><p>Seamlessly integrate Clinairo with your existing phone system and calendar in minutes.</p></div>
+    <div class="process-card"><div class="process-num">02</div><h4>Customize AI Workflows</h4><p>Tailor the AI's tone, knowledge base, and booking rules to match your clinic's style.</p></div>
+    <div class="process-card"><div class="process-num">03</div><h4>Automate Communication</h4><p>Deploy your AI receptionist and WhatsApp support to handle every channel, 24/7.</p></div>
+    <div class="process-card"><div class="process-num">04</div><h4>Improve Efficiency</h4><p>Watch appointment rates climb as missed calls vanish and front-desk workload drops.</p></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<div style="position:relative;">
+  <section class="section" id="testimonials">
+  <div class="eyebrow">Patient & Provider Feedback</div>
+  <h2>Trusted by Private Clinics</h2>
+  <p class="section-sub">Real feedback from clinics using Clinairo's AI Front Desk.</p>
+  <div class="testi-grid" id="testiGrid">
+    <div class="testi-card">
+      <div class="testi-quote">"Clinairo completely changed our office dynamic. Our missed-call rate dropped to zero and my front desk is no longer drowning in phone calls."</div>
+      <div class="testi-author"><div class="testi-avatar">AS</div><div><div class="testi-name">Dr. Abubakar Siddique</div><div class="testi-role">Neurologist</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"The integration with our scheduling was seamless. Patients love the instant responses on WhatsApp — bookings are up noticeably since we switched on Clinairo."</div>
+      <div class="testi-author"><div class="testi-avatar">MT</div><div><div class="testi-name">Marcus Thorne</div><div class="testi-role">Peak Chiropractic</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"We worried AI would feel impersonal, but the voice agent is genuinely natural. Most patients don't realize they're talking to AI at all."</div>
+      <div class="testi-author"><div class="testi-avatar">ER</div><div><div class="testi-name">Dr. Elena Rossi</div><div class="testi-role">BrightSmile Dental</div></div></div>
+    </div>
+  </div>
+  </section>
+</div>
+
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="eyebrow center">Questions & Answers</div>
+  <h2 class="center">Common Inquiries</h2>
+  <div class="faq-list" id="faqList" style="margin: 0 auto;">
+    <div class="faq-item">
+      <div class="faq-q"><span>How does the AI receptionist work?</span><span class="plus">+</span></div>
+      <div class="faq-a"><p>Clinairo's AI answers incoming calls using natural voice conversation, understands the patient's request, checks your calendar, and books, reschedules, or answers questions — all without a human on the line.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>Can it integrate with our scheduling system?</span><span class="plus">+</span></div>
+      <div class="faq-a"><p>Yes — Clinairo connects with common calendar and CRM platforms so bookings sync automatically without any manual double-entry.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>Does it work after clinic hours?</span><span class="plus">+</span></div>
+      <div class="faq-a"><p>Yes. Clinairo runs 24/7, including nights, weekends, and holidays — the exact hours when clinics typically lose the most calls.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>Can patients book appointments automatically?</span><span class="plus">+</span></div>
+      <div class="faq-a"><p>Yes — patients can book, reschedule, or cancel entirely through the AI, whether by phone, WhatsApp, or chat, with confirmations sent instantly.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>Is the system customizable for our clinic?</span><span class="plus">+</span></div>
+      <div class="faq-a"><p>Yes. The AI's tone, knowledge base, and booking rules are configured specifically to match your clinic's services and style during onboarding.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact" style="background:var(--navy-2);border-radius:28px;margin:24px auto;">
+  <div class="eyebrow">Get in Touch</div>
+  <h2>Let's Stop the Revenue Leak</h2>
+  <p class="section-sub">You've seen what missed calls and after-hours gaps are costing you. Book a free consultation and see exactly how Clinairo recovers it.</p>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Email Us</h3>
+      <p>Our specialists typically respond within 2–4 business hours.</p>
+      <div class="contact-email">contact@clinairo.com</div>
+    </div>
+    <div class="contact-form">
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group"><label>Full Name</label><input type="text" placeholder="Jane Doe" required></div>
+          <div class="form-group"><label>Clinic Name</label><input type="text" placeholder="Elite Wellness Clinic" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Email Address</label><input type="email" placeholder="jane@clinic.com" required></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+1 (555) 000-0000" required></div>
+        </div>
+        <div class="form-group"><label>Your Message</label><textarea placeholder="Tell us about your clinic's current front-desk challenges..."></textarea></div>
+        <button type="submit" class="cta-btn green submit-btn">Book Free Consultation</button>
+        <div class="form-success" id="formSuccess">✓ Thanks! We'll be in touch within 24 hours.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Clinairo</a>
+      <p>AI Front Desk automation for private clinics — answering every call, recovering every missed booking, 24/7.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="X / Twitter">X</a>
+        <a href="#" aria-label="Facebook">f</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Product</h4>
+      <a href="features.html">Features</a>
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="testimonials.html">Testimonials</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+    </div>
+    <div class="footer-col footer-cta-col">
+      <h4>Get Started</h4>
+      <p>See what missed calls are costing your clinic — book a free consultation.</p>
+      <a href="contact.html" class="cta-btn">Book Free Consultation</a>
+      <a href="mailto:contact@clinairo.com" class="footer-cta-email">contact@clinairo.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2026 Clinairo Automation Inc. All rights reserved.</div>
+    <div class="footer-badges">
+      <span class="footer-badge">🛡️ HIPAA Compliant</span>
+      <span class="footer-badge">🇺🇸 Built for US Clinics</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---- HERO PHONE CHAT LOOP ---- */
+const chatBody = document.getElementById('chatBody');
+const confirmCard = document.getElementById('confirmCard');
+const script = [
+  { type: 'typing', role: 'ai', delay: 600 },
+  { type: 'bubble', role: 'ai', text: "Hi! Thanks for calling Bright Smile Dental. How can I help?", delay: 1400 },
+  { type: 'typing', role: 'patient', delay: 900 },
+  { type: 'bubble', role: 'patient', text: "Do you have any openings this Thursday?", delay: 1000 },
+  { type: 'typing', role: 'ai', delay: 900 },
+  { type: 'bubble', role: 'ai', text: "Yes! 2:00pm and 4:30pm are open. Which works better?", delay: 1400 },
+  { type: 'typing', role: 'patient', delay: 700 },
+  { type: 'bubble', role: 'patient', text: "2pm works great", delay: 900 },
+  { type: 'typing', role: 'ai', delay: 900 },
+  { type: 'bubble', role: 'ai', text: "You're all set for Thursday at 2:00pm!", delay: 1200 },
+  { type: 'confirm', delay: 1800 },
+  { type: 'reset', delay: 2500 }
+];
+let stepIndex = 0, activeTyping = null;
+function clearTyping() { if (activeTyping) { activeTyping.remove(); activeTyping = null; } }
+function runStep() {
+  const step = script[stepIndex];
+  if (step.type === 'typing') {
+    clearTyping();
+    const el = document.createElement('div');
+    el.className = 'typing';
+    if (step.role === 'patient') el.style.alignSelf = 'flex-end';
+    el.innerHTML = '<span></span><span></span><span></span>';
+    chatBody.appendChild(el);
+    requestAnimationFrame(() => el.classList.add('show'));
+    activeTyping = el;
+  }
+  if (step.type === 'bubble') {
+    clearTyping();
+    const el = document.createElement('div');
+    el.className = 'bubble ' + step.role;
+    el.textContent = step.text;
+    chatBody.appendChild(el);
+    requestAnimationFrame(() => el.classList.add('show'));
+  }
+  if (step.type === 'confirm') confirmCard.classList.add('show');
+  if (step.type === 'reset') { confirmCard.classList.remove('show'); chatBody.innerHTML = ''; stepIndex = -1; }
+  stepIndex++;
+  if (stepIndex >= script.length) stepIndex = 0;
+  setTimeout(runStep, script[stepIndex]?.delay || 1000);
+}
+setTimeout(runStep, 500);
+
+function countUp(el, end, suffix, duration) {
+  const startTime = performance.now();
+  function tick(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    el.textContent = Math.floor(progress * end) + suffix;
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+
+/* ---- DIAGRAM: radial feature nodes + connector lines + flowing particles ---- */
+const hubArea = document.getElementById('hubArea');
+const svg = document.getElementById('connectorSvg');
+const features = [
+  { icon: '📞', label: '24/7 AI Voice Receptionist' },
+  { icon: '📅', label: 'AI Appointment Scheduling' },
+  { icon: '📲', label: 'Missed Call Text-Back' },
+  { icon: '💬', label: 'WhatsApp Patient Support' },
+  { icon: '🔔', label: 'Appointment Reminders' },
+  { icon: '📋', label: 'Patient FAQ Assistant' },
+  { icon: '🔄', label: 'CRM Synchronization' },
+  { icon: '📊', label: 'Daily Operational Reports' }
+];
+
+function buildDiagram() {
+  svg.innerHTML = '';
+  hubArea.querySelectorAll('.feature-node').forEach(n => n.remove());
+  const w = hubArea.clientWidth, h = hubArea.clientHeight;
+  const cx = w / 2, cy = h / 2;
+  const radius = Math.min(w, h) / 2 - 60;
+  const ns = 'http://www.w3.org/2000/svg';
+
+  features.forEach((f, i) => {
+    const angle = (i / features.length) * 2 * Math.PI - Math.PI / 2;
+    const x = cx + radius * Math.cos(angle);
+    const y = cy + radius * Math.sin(angle);
+    const dist = Math.sqrt((x - cx) ** 2 + (y - cy) ** 2);
+
+    const line = document.createElementNS(ns, 'path');
+    line.setAttribute('d', `M ${cx} ${cy} L ${x} ${y}`);
+    line.setAttribute('class', 'connector-line');
+    line.setAttribute('stroke', i % 2 === 0 ? '#3E9DFF' : '#34D399');
+    line.setAttribute('stroke-dasharray', dist);
+    line.setAttribute('stroke-dashoffset', dist);
+    svg.appendChild(line);
+    requestAnimationFrame(() => setTimeout(() => { line.style.strokeDashoffset = '0'; }, i * 120));
+
+    const particle = document.createElementNS(ns, 'circle');
+    particle.setAttribute('r', 3);
+    particle.setAttribute('class', 'particle' + (i % 2 !== 0 ? ' out' : ''));
+    svg.appendChild(particle);
+    animateParticle(particle, cx, cy, x, y, 2000 + i * 150);
+
+    const node = document.createElement('div');
+    node.className = 'feature-node';
+    node.style.left = (x - 54) + 'px';
+    node.style.top = (y - 20) + 'px';
+    node.innerHTML = `<span class="fi">${f.icon}</span>${f.label}`;
+    hubArea.appendChild(node);
+    setTimeout(() => node.classList.add('in-view'), 300 + i * 100);
+  });
+}
+
+function animateParticle(el, x1, y1, x2, y2, duration) {
+  let start = null;
+  function frame(ts) {
+    if (!start) start = ts;
+    let progress = ((ts - start) % duration) / duration;
+    const x = x1 + (x2 - x1) * progress;
+    const y = y1 + (y2 - y1) * progress;
+    el.setAttribute('cx', x);
+    el.setAttribute('cy', y);
+    el.style.opacity = progress < 0.05 || progress > 0.95 ? progress * 10 : 1;
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+
+window.addEventListener('load', buildDiagram);
+window.addEventListener('resize', () => { clearTimeout(window._rt); window._rt = setTimeout(buildDiagram, 300); });
+
+/* ---- Scroll reveal for chips + trust cards ---- */
+document.querySelectorAll('.problem-row').forEach(el => {
+  el.style.transitionDelay = (parseInt(el.dataset.i) * 70) + 'ms';
+});
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
+}, { threshold: 0.3 });
+document.querySelectorAll('.chip, .trust-card, .problem-row, .process-card, .testi-card').forEach(el => revealObserver.observe(el));
+
+/* ---- Mobile hamburger menu ---- */
+const burgerBtn = document.getElementById('burgerBtn');
+const mainNav = document.getElementById('mainNav');
+if (burgerBtn && mainNav) {
+  burgerBtn.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    burgerBtn.classList.toggle('open', isOpen);
+    burgerBtn.setAttribute('aria-expanded', isOpen);
+  });
+  mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      burgerBtn.classList.remove('open');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+/* ---- Free Revenue Audit Calculator ---- */
+const auditBtn = document.getElementById('auditBtn');
+if (auditBtn) {
+  auditBtn.addEventListener('click', () => {
+    const calls = parseFloat(document.getElementById('auCalls').value) || 0;
+    const missedPct = parseFloat(document.getElementById('auMissedPct').value) || 0;
+    const afterHours = parseFloat(document.getElementById('auAfterHours').value) || 0;
+    const apptValue = parseFloat(document.getElementById('auApptValue').value) || 0;
+    const convRate = parseFloat(document.getElementById('auConvRate').value) || 0;
+
+    // Missed calls during business hours
+    const missedCallsPerWeek = calls * (missedPct / 100);
+    // Total unhandled calls = missed during hours + all after-hours calls
+    const unhandledPerWeek = missedCallsPerWeek + afterHours;
+    // Bookings lost = unhandled calls * conversion rate for answered calls
+    const lostBookingsPerWeek = unhandledPerWeek * (convRate / 100);
+    const lostBookingsPerMonth = lostBookingsPerWeek * 4.33;
+    const monthlyLoss = lostBookingsPerMonth * apptValue;
+    const annualLoss = monthlyLoss * 12;
+
+    animateAuditNumber('auOutBookings', Math.round(lostBookingsPerMonth), '', '');
+    animateAuditNumber('auOutMonthly', Math.round(monthlyLoss), '$', '');
+    animateAuditNumber('auOutAnnual', Math.round(annualLoss), '$', '');
+
+    document.getElementById('auditResults').classList.add('show');
+  });
+}
+
+function animateAuditNumber(id, end, prefix, suffix) {
+  const el = document.getElementById(id);
+  const startTime = performance.now();
+  const duration = 1000;
+  function tick(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    const val = Math.floor(progress * end);
+    el.textContent = prefix + val.toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+/* ---- FAQ accordion ---- */
+document.querySelectorAll('.faq-item').forEach(item => {
+  const q = item.querySelector('.faq-q');
+  const a = item.querySelector('.faq-a');
+  q.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(open => {
+      open.classList.remove('open');
+      open.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      a.style.maxHeight = a.scrollHeight + 'px';
+    }
+  });
+});
+
+/* ---- Contact form (UI only in this preview — wires to Firebase in production build) ---- */
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('formSuccess').classList.add('show');
+    contactForm.reset();
+  });
+}
+
+/* ---- Revenue section animation on scroll ---- */
+const revenueSection = document.getElementById('revenue');
+let revenuePlayed = false;
+const revenueObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !revenuePlayed) {
+      revenuePlayed = true;
+      setTimeout(() => {
+        document.getElementById('missedTag').classList.add('show');
+        document.getElementById('lossFill').style.width = '100%';
+      }, 800);
+      animateCounter(document.getElementById('lostCounter'), 4200, '$', 1500, 600);
+      setTimeout(() => {
+        document.getElementById('answeredIcon').style.transition = 'transform 0.3s';
+        document.getElementById('bookedTag').classList.add('show');
+        document.getElementById('calFill').style.width = '100%';
+      }, 900);
+      animateCounter(document.getElementById('gainCounter'), 4200, '$', 1500, 1600);
+    }
+  });
+}, { threshold: 0.4 });
+revenueObserver.observe(revenueSection);
+
+function animateCounter(el, end, prefix, duration, startDelay) {
+  setTimeout(() => {
+    const startTime = performance.now();
+    function tick(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      el.textContent = prefix + Math.floor(progress * end).toLocaleString();
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }, startDelay);
+}
+</script>
+
+</body>
+</html>

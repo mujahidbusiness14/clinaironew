@@ -1,0 +1,11 @@
+{
+  "name": "clinairo-website",
+  "version": "1.0.0",
+  "description": "Clinairo — AI Front Desk automation website for private clinics",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve public",
+    "start": "npx serve public"
+  },
+  "keywords": ["clinairo", "ai-front-desk", "healthcare-automation"]
+}
