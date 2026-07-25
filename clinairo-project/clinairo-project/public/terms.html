@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Clinairo</title>
+<meta name="description" content="Clinairo's Terms of Service governing use of our AI Front Desk automation platform, including license, payment, liability, and termination terms.">
+<link rel="canonical" href="https://www.clinairo.com/terms.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Clinairo",
+  "url": "https://www.clinairo.com/",
+  "logo": "https://www.clinairo.com/android-chrome-512x512.png",
+  "description": "Clinairo provides AI automation services for clinics, including an AI front desk system that answers calls, books appointments, and recovers missed-call revenue 24/7.",
+  "sameAs": []
+}
+</script>
+<style>
+:root {
+  --navy: #0A1420; --navy-2: #0F1D30; --navy-3: #142238;
+  --white: #F7F9FC; --muted: #93A1B8;
+  --accent: #3E9DFF; --border: rgba(255,255,255,0.08);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--navy); color: var(--white); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif; }
+a { color: inherit; }
+header { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 18px 40px; background: rgba(10,20,32,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+.logo { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; text-decoration: none; color: var(--white); }
+nav { display: flex; gap: 32px; align-items: center; }
+nav a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; }
+.burger-btn { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 34px; height: 34px; background: none; border: none; cursor: pointer; padding: 0; }
+.burger-btn span { display: block; width: 100%; height: 2px; background: var(--white); border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; }
+.burger-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger-btn.open span:nth-child(2) { opacity: 0; }
+.burger-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.cta-btn { background: var(--accent); color: #fff; padding: 10px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; display: inline-block; text-align: center; }
+
+.legal-wrap { display: grid; grid-template-columns: 240px 1fr; gap: 60px; max-width: 1100px; margin: 0 auto; padding: 70px 40px 100px; }
+.legal-toc { position: sticky; top: 100px; align-self: start; }
+.legal-toc a { display: block; font-size: 13px; color: var(--muted); text-decoration: none; padding: 6px 0; }
+.legal-toc a:hover { color: var(--white); }
+.legal-body h1 { font-size: 30px; margin-bottom: 6px; }
+.legal-body .updated { color: var(--muted); font-size: 13px; margin-bottom: 34px; }
+.legal-body h2 { font-size: 20px; margin-top: 36px; margin-bottom: 12px; }
+.legal-body h2:first-of-type { margin-top: 0; }
+.legal-body p, .legal-body li { font-size: 14.5px; color: var(--muted); line-height: 1.7; margin-bottom: 10px; }
+.legal-body ul { padding-left: 20px; margin-bottom: 14px; }
+.legal-body a.inline { color: var(--accent); }
+
+footer { border-top: 1px solid var(--border); padding: 50px 40px; }
+.footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+.footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.footer-links a { color: var(--muted); font-size: 13px; text-decoration: none; }
+.footer-copy { color: var(--muted); font-size: 13px; }
+
+@media (max-width: 900px) {
+
+    .burger-btn { display: flex; }
+    nav#mainNav {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0;
+      background: rgba(10,20,32,0.98); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      max-height: 0; overflow: hidden; opacity: 0;
+      transition: max-height 0.35s ease, opacity 0.3s ease;
+    }
+    nav#mainNav.open { max-height: 420px; opacity: 1; }
+    nav#mainNav a { padding: 16px 24px; border-bottom: 1px solid var(--border); font-size: 15px; }
+    nav#mainNav a.cta-btn { margin: 16px 24px; text-align: center; border-bottom: none; }
+  .legal-wrap { grid-template-columns: 1fr; }
+  .legal-toc { display: none; }
+}
+
+/* ---------- PREMIUM FOOTER ---------- */
+.footer-cta-col .cta-btn, .footer-cta-col .cta-btn:hover, .footer-cta-col .cta-btn:visited { color: #ffffff !important; opacity: 1 !important; }
+.footer-spacer { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+.footer-spacer .line { height: 1px; background: linear-gradient(90deg, transparent, var(--border) 20%, var(--border) 80%, transparent); margin: 60px 0 0; }
+
+.site-footer { border-top: 1px solid var(--border); background: var(--navy-2); padding: 70px 40px 0; }
+.footer-top { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 50px; padding-bottom: 50px; }
+.footer-brand .logo { font-size: 22px; margin-bottom: 14px; display: inline-block; }
+.footer-brand p { font-size: 13.5px; color: var(--muted); line-height: 1.6; max-width: 280px; margin-bottom: 20px; }
+.footer-social { display: flex; gap: 10px; }
+.footer-social a { width: 34px; height: 34px; border-radius: 9px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--accent) !important; text-decoration: none; transition: background 0.2s ease, color 0.2s ease; }
+.footer-social a:hover { background: var(--accent); color: #fff !important; }
+.footer-col h4 { font-size: 12.5px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+.footer-col a { display: block; font-size: 14px; color: var(--white); opacity: 0.85; text-decoration: none; margin-bottom: 12px; transition: opacity 0.2s ease; }
+.footer-col a:hover { opacity: 1; color: var(--accent); }
+.footer-cta-col p { font-size: 13.5px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+.footer-cta-col .cta-btn { width: 100%; margin-bottom: 14px; }
+.footer-cta-email { font-size: 13px; color: var(--accent); text-decoration: none; }
+.footer-bottom { max-width: 1200px; margin: 0 auto; border-top: 1px solid var(--border); padding: 24px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+.footer-copy { font-size: 12.5px; color: var(--muted); }
+.footer-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+.footer-badge { font-size: 11px; font-weight: 600; color: var(--muted); background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: 5px 11px; border-radius: 999px; display: flex; align-items: center; gap: 5px; }
+
+@media (max-width: 900px) {
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+@media (max-width: 560px) {
+  .footer-top { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Clinairo</a>
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="services.html">Services</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="cta-btn">Book Free Consultation</a>
+  </nav>
+  <button class="burger-btn" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="legal-wrap">
+  <div class="legal-toc">
+    <a href="#acceptance">1. Acceptance of Terms</a>
+    <a href="#license">2. Use License</a>
+    <a href="#service-levels">3. Service Levels & Support</a>
+    <a href="#ai-accuracy">4. Accuracy of AI Output</a>
+    <a href="#payment">5. Payment & Subscription</a>
+    <a href="#liability">6. Limitation of Liability</a>
+    <a href="#termination">7. Termination</a>
+  </div>
+  <div class="legal-body">
+    <h1>Terms of Service</h1>
+    <p class="updated">Last Updated: May 18, 2026</p>
+
+    <h2 id="acceptance">1. Acceptance of Terms</h2>
+    <p>By accessing or using the Clinairo platform, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site or our services.</p>
+
+    <h2 id="license">2. Use License</h2>
+    <p>Clinairo grants you a non-exclusive, non-transferable, revocable license to access and use our AI automation tools solely for your professional clinic operations. You may not:</p>
+    <ul>
+      <li>Modify or copy our proprietary AI models or software</li>
+      <li>Use the services for any illegal or unauthorized purpose</li>
+      <li>Attempt to reverse engineer any software contained on Clinairo's platform</li>
+      <li>Remove any copyright or other proprietary notations from the materials</li>
+    </ul>
+
+    <h2 id="service-levels">3. Service Levels & Support</h2>
+    <p>We strive to provide 99.9% uptime for our AI voice and messaging services. However, Clinairo does not guarantee uninterrupted service. Support is provided according to your specific service tier agreement.</p>
+
+    <h2 id="ai-accuracy">4. Accuracy of AI Output</h2>
+    <p>While our AI is highly advanced, you acknowledge that AI-generated communications may occasionally contain errors. Clinairo provides tools for you to monitor and correct AI interactions. The clinic remains ultimately responsible for clinical outcomes and patient medical advice.</p>
+
+    <h2 id="payment">5. Payment & Subscription</h2>
+    <p>Fees for our services are billed in advance on a monthly or annual basis. All fees are non-refundable unless otherwise required by law or specified in your custom Service Agreement.</p>
+
+    <h2 id="liability">6. Limitation of Liability</h2>
+    <p>In no event shall Clinairo or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Clinairo's platform.</p>
+
+    <h2 id="termination">7. Termination</h2>
+    <p>We may terminate or suspend your access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Clinairo</a>
+      <p>AI Front Desk automation for private clinics — answering every call, recovering every missed booking, 24/7.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="X / Twitter">X</a>
+        <a href="#" aria-label="Facebook">f</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Product</h4>
+      <a href="features.html">Features</a>
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="testimonials.html">Testimonials</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+    </div>
+    <div class="footer-col footer-cta-col">
+      <h4>Get Started</h4>
+      <p>See what missed calls are costing your clinic — book a free consultation.</p>
+      <a href="contact.html" class="cta-btn">Book Free Consultation</a>
+      <a href="mailto:contact@clinairo.com" class="footer-cta-email">contact@clinairo.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2026 Clinairo Automation Inc. All rights reserved.</div>
+    <div class="footer-badges">
+      <span class="footer-badge">🛡️ HIPAA Compliant</span>
+      <span class="footer-badge">🇺🇸 Built for US Clinics</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const burgerBtn = document.getElementById('burgerBtn');
+const mainNav = document.getElementById('mainNav');
+if (burgerBtn && mainNav) {
+  burgerBtn.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    burgerBtn.classList.toggle('open', isOpen);
+    burgerBtn.setAttribute('aria-expanded', isOpen);
+  });
+  mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      burgerBtn.classList.remove('open');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+</script>
+</body>
+</html>
