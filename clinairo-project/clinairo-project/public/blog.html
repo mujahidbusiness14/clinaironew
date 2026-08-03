@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Clinairo | AI Automation Insights for Clinics</title>
+<meta name="description" content="Practical insights on AI automation, missed call recovery, and patient communication for private clinics — from the team behind Clinairo.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Clinairo">
+<meta property="og:title" content="Blog — Clinairo | AI Automation Insights for Clinics">
+<meta property="og:description" content="Practical insights on AI automation, missed call recovery, and patient communication for private clinics — from the team behind Clinairo.">
+<meta property="og:url" content="https://www.clinairo.com/blog.html">
+<meta property="og:image" content="https://www.clinairo.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog — Clinairo | AI Automation Insights for Clinics">
+<meta name="twitter:description" content="Practical insights on AI automation, missed call recovery, and patient communication for private clinics — from the team behind Clinairo.">
+<meta name="twitter:image" content="https://www.clinairo.com/og-image.png">
+
+<link rel="canonical" href="https://www.clinairo.com/blog.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Clinairo",
+  "url": "https://www.clinairo.com/",
+  "logo": "https://www.clinairo.com/android-chrome-512x512.png",
+  "description": "Clinairo provides AI automation services for clinics, including an AI front desk system that answers calls, books appointments, and recovers missed-call revenue 24/7.",
+  "sameAs": []
+}
+</script>
+<style>
+:root {
+  --navy: #0A1420; --navy-2: #0F1D30; --navy-3: #142238;
+  --white: #F7F9FC; --muted: #93A1B8;
+  --accent: #3E9DFF; --accent-dim: rgba(62,157,255,0.15);
+  --green: #34D399; --green-dim: rgba(52,211,153,0.14);
+  --border: rgba(255,255,255,0.08);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
+body { background: var(--navy); color: var(--white); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif; overflow-x: hidden; }
+a { color: inherit; }
+.section { max-width: 1200px; margin: 0 auto; padding: 90px 40px; }
+.eyebrow { color: var(--green); font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; }
+h2 { font-size: 36px; font-weight: 700; letter-spacing: -0.8px; margin-bottom: 16px; }
+.center { text-align: center; margin-left: auto; margin-right: auto; }
+
+header { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 18px 40px; background: rgba(10,20,32,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+.logo { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; text-decoration: none; color: var(--white); }
+nav { display: flex; gap: 28px; align-items: center; }
+nav a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a.active { color: var(--white); }
+.cta-btn { background: var(--accent); color: #fff; border: none; padding: 10px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; white-space: nowrap; display: inline-block; text-decoration: none; text-align: center; }
+.cta-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(62,157,255,0.3); }
+.burger-btn { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 34px; height: 34px; background: none; border: none; cursor: pointer; padding: 0; }
+.burger-btn span { display: block; width: 100%; height: 2px; background: var(--white); border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; }
+.burger-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger-btn.open span:nth-child(2) { opacity: 0; }
+.burger-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.page-hero { max-width: 800px; margin: 0 auto; padding: 80px 40px 20px; text-align: center; }
+.page-hero h1 { font-size: 44px; font-weight: 700; letter-spacing: -1px; margin-bottom: 18px; }
+.page-hero p { color: var(--muted); font-size: 17px; line-height: 1.6; }
+
+.post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.post-card { background: var(--navy-3); border: 1px solid var(--border); border-radius: 18px; padding: 32px; text-decoration: none; display: block; transition: transform 0.2s ease, border-color 0.2s ease; }
+.post-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+.post-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--green); background: var(--green-dim); padding: 4px 11px; border-radius: 999px; margin-bottom: 16px; }
+.post-card h3 { font-size: 20px; margin-bottom: 10px; color: var(--white); }
+.post-card p { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+.post-meta { font-size: 12px; color: var(--muted); }
+.post-card.coming-soon { opacity: 0.5; cursor: default; }
+.post-card.coming-soon:hover { transform: none; border-color: var(--border); }
+
+footer.site-footer { border-top: 1px solid var(--border); background: var(--navy-2); padding: 70px 40px 0; }
+.footer-top { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 50px; padding-bottom: 50px; }
+.footer-brand .logo { font-size: 22px; margin-bottom: 14px; display: inline-block; }
+.footer-brand p { font-size: 13.5px; color: var(--muted); line-height: 1.6; max-width: 280px; margin-bottom: 20px; }
+.footer-social { display: flex; gap: 10px; }
+.footer-social a { width: 34px; height: 34px; border-radius: 9px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--accent) !important; text-decoration: none; transition: background 0.2s ease, color 0.2s ease; }
+.footer-social a:hover { background: var(--accent); color: #fff !important; }
+.footer-col h4 { font-size: 12.5px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+.footer-col a { display: block; font-size: 14px; color: var(--white); opacity: 0.85; text-decoration: none; margin-bottom: 12px; transition: opacity 0.2s ease; }
+.footer-col a:hover { opacity: 1; color: var(--accent); }
+.footer-cta-col p { font-size: 13.5px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+.footer-cta-col .cta-btn { width: 100%; margin-bottom: 14px; text-align: center; }
+.footer-cta-col .cta-btn, .footer-cta-col .cta-btn:hover, .footer-cta-col .cta-btn:visited { color: #ffffff !important; opacity: 1 !important; }
+.footer-cta-email { font-size: 13px; color: var(--accent); text-decoration: none; }
+.footer-bottom { max-width: 1200px; margin: 0 auto; border-top: 1px solid var(--border); padding: 24px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+.footer-copy { font-size: 12.5px; color: var(--muted); }
+.footer-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+.footer-badge { font-size: 11px; font-weight: 600; color: var(--muted); background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: 5px 11px; border-radius: 999px; display: flex; align-items: center; gap: 5px; }
+.footer-spacer { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+.footer-spacer .line { height: 1px; background: linear-gradient(90deg, transparent, var(--border) 20%, var(--border) 80%, transparent); margin: 60px 0 0; }
+
+@media (max-width: 900px) {
+  .burger-btn { display: flex; }
+  nav#mainNav {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: rgba(10,20,32,0.98); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    max-height: 0; overflow: hidden; opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.3s ease;
+  }
+  nav#mainNav.open { max-height: 500px; opacity: 1; }
+  nav#mainNav a { padding: 16px 24px; border-bottom: 1px solid var(--border); font-size: 15px; }
+  nav#mainNav a.cta-btn { margin: 16px 24px; text-align: center; border-bottom: none; }
+  .post-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  h2 { font-size: 28px; }
+  .page-hero h1 { font-size: 32px; }
+}
+@media (max-width: 560px) {
+  .footer-top { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Clinairo</a>
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="index.html#audit">ROI Calculator</a>
+    <a href="features.html">Features</a>
+    <a href="services.html">Services</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="cta-btn">Book Free Consultation</a>
+  </nav>
+  <button class="burger-btn" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="page-hero">
+  <div class="eyebrow center">Resources</div>
+  <h1>Insights for Clinics Going AI-First</h1>
+  <p>Practical, no-fluff articles on AI automation, missed-call recovery, and patient communication — written for clinic owners, not developers.</p>
+</div>
+
+<section class="section">
+  <div class="post-grid">
+    <a href="blog-revenue-lost-to-missed-calls.html" class="post-card">
+      <div class="post-tag">Revenue</div>
+      <h3>How Much Revenue Does Your Clinic Lose to Missed Calls?</h3>
+      <p>A practical breakdown of where missed-call revenue actually goes — and the formula to calculate what it's costing your clinic specifically.</p>
+      <div class="post-meta">8 min read</div>
+    </a>
+    <a href="blog-ai-vs-human-receptionist.html" class="post-card">
+      <div class="post-tag">Comparison</div>
+      <h3>AI Receptionist vs. Human Receptionist: What Clinics Should Know</h3>
+      <p>A balanced look at where AI genuinely wins, where humans still matter most, and why the strongest setups use both together.</p>
+      <div class="post-meta">7 min read</div>
+    </a>
+    <a href="blog-hipaa-compliant-ai-healthcare.html" class="post-card">
+      <div class="post-tag">Compliance</div>
+      <h3>HIPAA Compliant AI for Healthcare: A Practical Guide</h3>
+      <p>What "HIPAA compliant AI" actually requires — BAAs, data minimization, and the questions to ask any vendor before you sign.</p>
+      <div class="post-meta">8 min read</div>
+    </a>
+    <a href="blog-ai-appointment-scheduling-software.html" class="post-card">
+      <div class="post-tag">Scheduling</div>
+      <h3>AI Appointment Scheduling Software: What to Look For</h3>
+      <p>A practical buyer's checklist — the features that actually matter for clinics, and the ones that are just marketing.</p>
+      <div class="post-meta">7 min read</div>
+    </a>
+    <a href="blog-reduce-no-shows-appointment-reminders.html" class="post-card">
+      <div class="post-tag">Operations</div>
+      <h3>How to Reduce No-Shows With Automated Reminders</h3>
+      <p>The reminder timing, channels, and confirmation loops that actually move your no-show rate.</p>
+      <div class="post-meta">6 min read</div>
+    </a>
+    <a href="blog-ai-medical-office-assistant.html" class="post-card">
+      <div class="post-tag">Guide</div>
+      <h3>AI Medical Office Assistant: What It Actually Does</h3>
+      <p>A clear breakdown of what these tools automate day to day, separated from vague marketing language.</p>
+      <div class="post-meta">7 min read</div>
+    </a>
+    <a href="blog-patient-scheduling-software-guide.html" class="post-card">
+      <div class="post-tag">Guide</div>
+      <h3>Patient Scheduling Software: What Actually Matters</h3>
+      <p>A comparison framework beyond the feature list — the criteria that actually predict fit for your clinic.</p>
+      <div class="post-meta">7 min read</div>
+    </a>
+    <a href="blog-answering-service-vs-ai-voice-agent.html" class="post-card">
+      <div class="post-tag">Comparison</div>
+      <h3>24/7 Answering Service vs. AI Voice Agent for Clinics</h3>
+      <p>Real cost, capability, and experience differences between traditional answering services and AI voice agents.</p>
+      <div class="post-meta">7 min read</div>
+    </a>
+    <a href="blog-ai-receptionist-cost.html" class="post-card">
+      <div class="post-tag">Pricing</div>
+      <h3>How Much Does an AI Receptionist Cost?</h3>
+      <p>A realistic pricing breakdown — flat-rate vs. per-minute, typical ranges, and hidden costs to watch for.</p>
+      <div class="post-meta">6 min read</div>
+    </a>
+    <a href="blog-dental-office-automation-guide.html" class="post-card">
+      <div class="post-tag">Dental</div>
+      <h3>Dental Office Automation: The Complete Guide for 2026</h3>
+      <p>Where automation delivers the most value for dental practices specifically, and what to prioritize first.</p>
+      <div class="post-meta">8 min read</div>
+    </a>
+  </div>
+</section>
+
+<div class="footer-spacer"><div class="line"></div></div>
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Clinairo</a>
+      <p>AI Front Desk automation for private clinics — answering every call, recovering every missed booking, 24/7.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="X / Twitter">X</a>
+        <a href="#" aria-label="Facebook">f</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Product</h4>
+      <a href="features.html">Features</a>
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="testimonials.html">Testimonials</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+    </div>
+    <div class="footer-col footer-cta-col">
+      <h4>Get Started</h4>
+      <p>See what missed calls are costing your clinic — book a free consultation.</p>
+      <a href="contact.html" class="cta-btn">Book Free Consultation</a>
+      <a href="mailto:contact@clinairo.com" class="footer-cta-email">contact@clinairo.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2026 Clinairo Automation Inc. All rights reserved.</div>
+    <div class="footer-badges">
+      <span class="footer-badge">🛡️ HIPAA Compliant</span>
+      <span class="footer-badge">🇺🇸 Built for US Clinics</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const burgerBtn = document.getElementById('burgerBtn');
+const mainNav = document.getElementById('mainNav');
+if (burgerBtn && mainNav) {
+  burgerBtn.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    burgerBtn.classList.toggle('open', isOpen);
+    burgerBtn.setAttribute('aria-expanded', isOpen);
+  });
+  mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      burgerBtn.classList.remove('open');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+</script>
+
+</body>
+</html>
