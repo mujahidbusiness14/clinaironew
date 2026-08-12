@@ -1,0 +1,2074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F86MY7M3YV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F86MY7M3YV');
+</script>
+
+<title>AI Patient Revenue Operations for Med Spas | Clinairo</title>
+<meta name="description" content="Your consultations are worth more than the follow-up you're giving them. Clinairo captures, protects and recovers consultations for aesthetic practices.">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Clinairo">
+<meta property="og:title" content="AI Patient Revenue Operations for Med Spas | Clinairo">
+<meta property="og:description" content="Your consultations are worth more than the follow-up you're giving them. Clinairo captures, protects and recovers consultations for aesthetic practices.">
+<meta property="og:url" content="https://www.clinairo.com/">
+<meta property="og:image" content="https://www.clinairo.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Patient Revenue Operations for Med Spas | Clinairo">
+<meta name="twitter:description" content="Your consultations are worth more than the follow-up you're giving them. Clinairo captures, protects and recovers consultations for aesthetic practices.">
+<meta name="twitter:image" content="https://www.clinairo.com/og-image.png">
+
+<link rel="canonical" href="https://www.clinairo.com/">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0A1420">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Clinairo",
+  "url": "https://www.clinairo.com/",
+  "logo": "https://www.clinairo.com/android-chrome-512x512.png",
+  "description": "Clinairo is an AI patient revenue operations platform for US medical spas and aesthetic practices — capturing inquiries, protecting consultations, recovering unconverted patients, and attributing recovered revenue.",
+  "sameAs": []
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will patients know they're talking to AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 they're told. In practice it matters less than owners expect: patients care that someone answered at 8pm and got them booked. Anyone who asks for a person is transferred immediately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which booking software do you work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Platforms differ enormously in what they open up, and some restrict API access by plan \u2014 so rather than publish a logo wall, we check your specific platform and plan during onboarding and tell you exactly which of our four capability tiers you land in. Consultation recovery, outcome tracking and revenue attribution work at every tier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this replace my front desk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, and we'd be suspicious of anyone selling it that way. It takes the repetitive work \u2014 after-hours calls, reminder chasing, follow-up nobody has time for \u2014 so your team can handle the nervous first-timer and the patient standing at the counter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it give patients medical advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's built specifically not to. It books, explains logistics and clinic-approved pricing, and escalates. Anything clinical \u2014 a reaction, a complication, a question about suitability \u2014 routes straight to your team with an alert. That boundary is enforced in the system, not left to the model's judgment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you call patients with an AI voice for follow-up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Follow-up is text only, and anything that needs a voice goes to a human on your team with full context. We took that decision deliberately \u2014 it's better for patients and it keeps you on the right side of telemarketing rules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long until it's running?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Core is typically live in seven to ten days. Growth depends on your platform's integration tier and usually runs two to four weeks. Most of that time is us learning your treatment menu, pricing rules and how your team actually talks to patients \u2014 the part that makes it not sound like a robot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if it doesn't work for us?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 90-day guarantee above, with attribution rules agreed in writing before we start. After that it's month to month with 30 days' notice. No annual lock-in."
+      }
+    }
+  ]
+}
+</script>
+<style>
+/* ==========================================================
+   CLINAIRO v4
+   Dark navy base + warm ivory light sections.
+   Flat colour only — no gradients anywhere.
+   One accent: sky blue. Green = positive state only.
+   ========================================================== */
+:root{
+  /* dark */
+  --navy:#0A1420;
+  --navy-2:#0E1A2A;
+  --navy-3:#132436;
+  --raise:#1A2E44;
+
+  --text:#F0F5FA;
+  --body:#B9C7D8;
+  --dim:#8DA0B6;
+  --faint:#6F8399;
+  --line:rgba(255,255,255,.10);
+  --line-2:rgba(255,255,255,.18);
+  --input:#132436;
+
+  /* accents */
+  --blue:#3E9DFF;
+  --blue-hi:#5FAEFF;
+  --blue-tint:rgba(62,157,255,.10);
+  --green:#34D399;
+  --green-tint:rgba(52,211,153,.10);
+  --warn:#F0A387;
+
+  --r-btn:10px;
+  --r-sm:10px; --r:14px; --r-lg:20px; --r-pill:999px;
+  --maxw:1180px; --pad:26px;
+
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+
+/* Light sections simply re-declare the same variables. */
+.light{
+  --navy:#F5F2ED;
+  --navy-2:#FBF9F6;
+  --navy-3:#FFFFFF;
+  --raise:#EFEAE2;
+  --text:#111C28;
+  --body:#4C5A6B;
+  --dim:#5E6D7E;
+  --faint:#8494A5;
+  --line:rgba(17,28,40,.11);
+  --line-2:rgba(17,28,40,.22);
+  --input:#FFFFFF;
+  --blue-tint:rgba(62,157,255,.09);
+  --green-tint:rgba(52,211,153,.13);
+  background:var(--navy);
+  color:var(--text);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--navy);color:var(--text);font-family:var(--sans);font-size:15.5px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+input,select,textarea{font-family:var(--sans);color:inherit}
+::selection{background:rgba(62,157,255,.3)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+
+/* ---- Type (reduced sizes) ---- */
+h1,h2,h3,h4{font-weight:700;letter-spacing:-.028em;line-height:1.14;color:var(--text)}
+h1{font-size:clamp(31px,4.2vw,50px);line-height:1.08;letter-spacing:-.034em;font-weight:800}
+h2{font-size:clamp(24px,2.9vw,35px);letter-spacing:-.03em}
+h3{font-size:17px;line-height:1.32;letter-spacing:-.02em}
+p{color:var(--body)}
+.lead{font-size:16px;line-height:1.62;color:var(--body);max-width:58ch}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.hl{color:var(--blue)}
+
+.label{
+  display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--green);margin-bottom:14px;
+}
+/* Headings sit heavier on light sections so they stay prominent */
+.light h2,.light h3{font-weight:800}
+.light .sec-head h2{letter-spacing:-.034em}
+
+/* ---- Buttons: modelled on the existing Clinairo site ---- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:13px 26px;border-radius:var(--r-btn);
+  font-size:14.5px;font-weight:600;letter-spacing:-.005em;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s,border-color .2s,color .2s;
+  border:1px solid transparent;white-space:nowrap;
+}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-hi);transform:translateY(-1px);box-shadow:0 8px 20px rgba(62,157,255,.3)}
+.btn-green{background:var(--green);color:#06281D}
+.btn-green:hover{background:#48DDA6;transform:translateY(-1px);box-shadow:0 8px 20px rgba(52,211,153,.3)}
+.btn-ghost{background:transparent;border-color:var(--line-2);color:var(--text)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-1px)}
+.btn-sm{padding:10px 20px;font-size:13.5px}
+.btn-block{width:100%}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+
+/* ---- Header (tightened) ---- */
+header{position:sticky;top:0;z-index:100;background:rgba(10,20,32,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.hdr{max-width:var(--maxw);margin:0 auto;padding:11px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:9px;font-size:20px;font-weight:800;letter-spacing:-.04em;color:#F0F5FA}
+.logo .mark{width:27px;height:27px;border-radius:7px;background:#3E9DFF;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;font-weight:800}
+nav{display:flex;align-items:center;gap:17px}
+nav a{font-size:13.2px;font-weight:500;color:#8DA0B6;transition:color .2s;white-space:nowrap}
+nav a:hover{color:#F0F5FA}
+.burger{display:none;flex-direction:column;gap:5px;width:32px;height:32px;justify-content:center;align-items:center}
+.burger span{display:block;width:18px;height:2px;background:#F0F5FA;border-radius:2px;transition:transform .3s var(--ease),opacity .22s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ---- Sections ---- */
+section{padding:86px 0;position:relative}
+.alt{background:var(--navy-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{max-width:62ch;margin-bottom:46px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head.center .lead{margin-left:auto;margin-right:auto}
+.sec-head h2{margin-bottom:14px}
+
+/* ---- HERO (tighter top) ---- */
+.hero{padding:30px 0 72px}
+.hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:54px;align-items:center}
+.hero h1{margin-bottom:18px}
+.hero .lead{margin-bottom:28px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.hstats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.hstat{padding:18px 18px 0 0}
+.hstat+.hstat{padding-left:20px;border-left:1px solid var(--line)}
+.hstat .v{font-family:var(--mono);font-size:20px;font-weight:500;color:var(--blue);letter-spacing:-.05em;line-height:1.1;margin-bottom:8px}
+.hstat .k{font-size:11.8px;line-height:1.45;color:var(--dim)}
+
+/* Phone — copied from the existing Clinairo site */
+.phone-stage{display:flex;justify-content:center}
+.phone-wrap{flex-shrink:0;position:relative}
+.ambient-ring{position:absolute;border-radius:50%;border:1px solid #3E9DFF;opacity:0;top:50%;left:50%;transform:translate(-50%,-50%);animation:ring-pulse 3s infinite ease-out;pointer-events:none}
+.ambient-ring:nth-child(2){animation-delay:1s}
+@keyframes ring-pulse{0%{width:340px;height:340px;opacity:.3}100%{width:500px;height:500px;opacity:0}}
+.phone{
+  width:290px;height:664px;
+  background:linear-gradient(160deg,#131F30,#0B1522);
+  border-radius:36px;border:2px solid #3E9DFF;
+  box-shadow:0 40px 80px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.03),0 0 30px rgba(62,157,255,.25);
+  padding:20px 16px;position:relative;overflow:hidden;
+}
+.phone::before{
+  content:'';position:absolute;top:12px;left:50%;transform:translateX(-50%);
+  width:60px;height:5px;background:rgba(255,255,255,.15);border-radius:3px;
+}
+.chat-header{display:flex;align-items:center;gap:10px;padding:18px 4px 14px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:14px}
+.chat-avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#3E9DFF,#1E5FBF);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0}
+.chat-title{font-size:13px;font-weight:600;color:#F0F5FA}
+.chat-status{font-size:11px;color:#34D399}
+.chat-body{display:flex;flex-direction:column;gap:10px;min-height:400px;padding-bottom:76px}
+.bubble{max-width:80%;padding:10px 14px;border-radius:16px;font-size:13px;line-height:1.4;opacity:0;transform:translateY(16px) scale(.96);transition:opacity .4s ease,transform .4s ease}
+.bubble.show{opacity:1;transform:translateY(0) scale(1)}
+.bubble.patient{align-self:flex-end;background:#3E9DFF;color:#fff;border-bottom-right-radius:4px}
+.bubble.ai{align-self:flex-start;background:rgba(255,255,255,.08);color:#F0F5FA;border-bottom-left-radius:4px}
+.bubble .t{display:block;font-family:var(--mono);font-size:8px;opacity:.6;margin-top:5px;letter-spacing:.06em}
+.confirm-card{position:absolute;bottom:-80px;left:16px;right:16px;background:rgba(52,211,153,.14);border:1px solid rgba(52,211,153,.4);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:10px;opacity:0;transition:bottom .5s cubic-bezier(.34,1.56,.64,1),opacity .5s ease}
+.confirm-card.show{bottom:16px;opacity:1}
+.check-circle{width:24px;height:24px;border-radius:50%;background:#34D399;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;color:#0A1420;font-weight:700}
+.confirm-card span{font-size:13px;font-weight:600;color:#F0F5FA}
+.phone-cap{text-align:center;font-family:var(--mono);font-size:10px;color:var(--faint);letter-spacing:.11em;text-transform:uppercase;margin-top:22px}
+
+/* ---- Leak stream (SVG, no cards) ---- */
+.toggle{display:inline-flex;padding:4px;background:var(--navy-3);border:1px solid var(--line);border-radius:var(--r-btn);margin-bottom:6px}
+.toggle button{padding:9px 20px;border-radius:7px;font-size:13.5px;font-weight:600;color:var(--dim);transition:background .3s var(--ease),color .3s}
+.toggle button.on{background:var(--blue);color:#fff}
+.toggle button.on.good{background:var(--green);color:#06281D}
+
+.stream{margin:26px 0 0;overflow:visible}
+.stream .ribbon{fill:var(--warn);opacity:.85;transition:fill .6s ease}
+.stream.good .ribbon{fill:var(--green)}
+.stream .rail{stroke:var(--line);stroke-width:1}
+.stream .tick{stroke:var(--line-2);stroke-width:1}
+.stream .cap{font-family:var(--mono);font-size:10px;letter-spacing:.14em;fill:var(--faint)}
+.stream .big{font-family:var(--mono);font-size:34px;font-weight:500;letter-spacing:-.05em;fill:var(--warn);transition:fill .6s ease}
+.stream.good .big{fill:var(--green)}
+.stream .startn{font-family:var(--mono);font-size:34px;font-weight:500;letter-spacing:-.05em;fill:var(--text)}
+.drop{fill:var(--warn);opacity:0;animation:fall 2.4s linear infinite;transition:fill .6s ease}
+.stream.good .drop{fill:var(--green)}
+@keyframes fall{0%{transform:translateY(0);opacity:.85}70%{opacity:.35}100%{transform:translateY(62px);opacity:0}}
+
+.gates{display:grid;grid-template-columns:repeat(5,1fr);margin-top:26px;border-top:1px solid var(--line-2)}
+.gate{padding:22px 20px 0 0;position:relative}
+.gate+.gate{padding-left:22px;border-left:1px solid var(--line)}
+.gate::before{content:'';position:absolute;top:-2px;left:0;right:20px;height:3px;background:var(--warn);transform:scaleX(0);transform-origin:left;transition:transform .7s var(--ease),background .6s}
+.gate+.gate::before{left:22px}
+.gate.on::before{transform:scaleX(1)}
+.gate.fixed::before{background:var(--green)}
+.gate-n{font-family:var(--mono);font-size:9.5px;letter-spacing:.15em;color:var(--faint);margin-bottom:12px}
+.gate-pct{font-family:var(--mono);font-size:30px;font-weight:500;letter-spacing:-.05em;line-height:1;color:var(--warn);transition:color .5s}
+.gate.fixed .gate-pct{color:var(--green)}
+.gate-sub{font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin:7px 0 14px}
+.gate h3{font-size:15px;margin-bottom:7px}
+.gate p{font-size:12.6px;line-height:1.55;color:var(--dim)}
+.gate-fix{margin-top:14px;font-family:var(--mono);font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--blue);opacity:0;transform:translateY(4px);transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.gate.fixed .gate-fix{opacity:1;transform:none}
+.leak-note{font-size:13.5px;color:var(--dim);line-height:1.6;margin-top:28px;max-width:62ch}
+
+/* ---- Product walkthrough: the system running end to end ---- */
+.flow{padding:32px}
+.flow-rail{display:flex;align-items:flex-start;gap:0;position:relative;margin-bottom:32px}
+.flow-rail::before{
+  content:'';position:absolute;top:13px;left:6%;right:6%;height:2px;background:var(--line-2);
+}
+.flow-rail .prog{
+  position:absolute;top:13px;left:6%;height:2px;background:var(--green);width:0;
+  transition:width .55s var(--ease);z-index:1;
+}
+.fstep{
+  flex:1;background:none;text-align:center;position:relative;z-index:2;
+  padding:0 4px;display:flex;flex-direction:column;align-items:center;gap:10px;
+}
+.fstep .knob{
+  width:28px;height:28px;border-radius:50%;background:#0A1420;border:2px solid var(--line-2);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:11px;color:var(--faint);
+  transition:border-color .4s,background .4s,color .4s,transform .4s var(--ease);
+}
+.fstep.done .knob{border-color:var(--green);color:var(--green)}
+.fstep.on .knob{border-color:var(--green);background:var(--green);color:#06281D;transform:scale(1.18)}
+.fstep .lbl{
+  font-size:11.5px;line-height:1.35;color:var(--faint);font-weight:500;
+  transition:color .35s;max-width:13ch;
+}
+.fstep.on .lbl{color:var(--text);font-weight:600}
+.fstep.done .lbl{color:var(--dim)}
+
+.flow-body{display:grid;grid-template-columns:.86fr 1.14fr;gap:24px;align-items:stretch}
+.flow-say{display:flex;flex-direction:column}
+.flow-say .badge2{
+  align-self:flex-start;font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;
+  text-transform:uppercase;background:var(--blue);color:#fff;padding:4px 11px;
+  border-radius:var(--r-pill);font-weight:700;margin-bottom:14px;
+}
+.flow-say h3{font-size:20px;margin-bottom:10px}
+.flow-say p{font-size:13.8px;line-height:1.65;color:var(--dim)}
+.flow-say .out{
+  margin-top:auto;padding-top:18px;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);
+}
+.flow-say .key{transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.flow-say .key.swap{opacity:0;transform:translateY(8px)}
+
+.flow-log{
+  background:#060D16;border:1px solid var(--line);border-radius:16px;
+  padding:18px;min-height:266px;display:flex;flex-direction:column;
+}
+.log-top{
+  display:flex;align-items:center;gap:8px;padding-bottom:12px;margin-bottom:12px;
+  border-bottom:1px solid var(--line);font-family:var(--mono);font-size:9.5px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--faint);
+}
+.log-top i{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blip 2s infinite}
+.log-rows{display:flex;flex-direction:column;gap:9px}
+.lrow{
+  display:grid;grid-template-columns:58px 1fr;gap:12px;align-items:baseline;
+  opacity:0;transform:translateY(6px);animation:logIn .4s var(--ease) forwards;
+}
+@keyframes logIn{to{opacity:1;transform:none}}
+.lrow .ts{font-family:var(--mono);font-size:10px;color:var(--faint)}
+.lrow .msg{font-size:12.8px;line-height:1.45;color:var(--body)}
+.lrow .msg b{color:var(--text);font-weight:600}
+.lrow.good .msg b{color:var(--green)}
+.flow-foot{
+  display:flex;gap:10px;align-items:center;justify-content:space-between;
+  margin-top:20px;padding-top:16px;border-top:1px solid var(--line);flex-wrap:wrap;
+}
+.flow-foot .rev{font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--faint)}
+.flow-foot .rev b{color:var(--green);font-size:15px;letter-spacing:-.03em}
+.flow-play{
+  font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--dim);border:1px solid var(--line-2);border-radius:var(--r-pill);padding:6px 14px;
+  transition:color .25s,border-color .25s;
+}
+.flow-play:hover{color:var(--green);border-color:var(--green)}
+
+@media (max-width:900px){
+  .flow{padding:22px}
+  .flow-body{grid-template-columns:1fr;gap:18px}
+  .flow-rail{flex-wrap:nowrap;overflow-x:auto;gap:4px;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+  .flow-rail::before,.flow-rail .prog{display:none}
+  .fstep{flex:0 0 84px}
+  .fstep .lbl{font-size:10.5px;max-width:none}
+  .flow-log{min-height:230px}
+}
+
+/* ---- Feature explorer: tabs on desktop, accordion on mobile ---- */
+.feat{position:relative;display:block}
+.feat-list{width:44%;border-top:1px solid var(--line)}
+.feat-item{border-bottom:1px solid var(--line)}
+.feat-head{
+  width:100%;display:flex;align-items:center;gap:14px;text-align:left;
+  padding:18px 34px 18px 0;position:relative;transition:padding-left .35s var(--ease);
+}
+.feat-head::before{
+  content:'';position:absolute;left:0;top:50%;transform:translateY(-50%) scaleY(0);
+  width:3px;height:26px;background:var(--green);border-radius:2px;transition:transform .35s var(--ease);
+}
+.feat-item.on .feat-head{padding-left:16px}
+.feat-item.on .feat-head::before{transform:translateY(-50%) scaleY(1)}
+.feat-num{
+  font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.1em;
+  flex-shrink:0;transition:color .3s;
+}
+.feat-item.on .feat-num{color:var(--green)}
+.feat-t{font-size:15.5px;font-weight:600;letter-spacing:-.02em;transition:color .3s;flex:1}
+.feat-item.on .feat-t{color:var(--blue)}
+.feat-head:hover .feat-t{color:var(--blue)}
+.feat-head .arw{
+  position:absolute;right:6px;top:50%;width:8px;height:8px;
+  border-right:2px solid var(--faint);border-bottom:2px solid var(--faint);
+  transform:translateY(-70%) rotate(-45deg);transition:transform .35s var(--ease),border-color .3s;
+}
+.feat-item.on .feat-head .arw{border-color:var(--blue)}
+.feat-tagx{
+  font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;
+  background:var(--green);color:#06281D;padding:3px 8px;border-radius:var(--r-pill);font-weight:700;flex-shrink:0;
+}
+
+.feat-detail{
+  position:absolute;top:0;left:50%;right:0;
+  background:var(--navy-3);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px;
+  opacity:0;visibility:hidden;transform:translateY(14px);
+  transition:opacity .4s var(--ease),transform .4s var(--ease),visibility .4s;
+}
+.feat-item.on .feat-detail{opacity:1;visibility:visible;transform:none}
+.feat-detail h3{font-size:19px;margin-bottom:12px}
+.feat-detail p{font-size:13.8px;line-height:1.65;color:var(--dim);margin-bottom:20px}
+.feat-detail ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.feat-detail li{
+  font-size:13.2px;line-height:1.5;color:var(--body);padding-left:24px;position:relative;
+  opacity:0;transform:translateX(-8px);
+}
+.feat-item.on .feat-detail li{animation:featIn .45s var(--ease) forwards}
+.feat-item.on .feat-detail li:nth-child(1){animation-delay:.12s}
+.feat-item.on .feat-detail li:nth-child(2){animation-delay:.2s}
+.feat-item.on .feat-detail li:nth-child(3){animation-delay:.28s}
+@keyframes featIn{to{opacity:1;transform:none}}
+.feat-detail li::before{
+  content:'';position:absolute;left:0;top:6px;width:11px;height:6px;
+  border-left:2px solid var(--green);border-bottom:2px solid var(--green);transform:rotate(-45deg);
+}
+
+@media (max-width:900px){
+  .feat-list{width:100%}
+  .feat-detail{
+    position:static;opacity:1;visibility:visible;transform:none;
+    background:transparent;border:none;border-radius:0;padding:0 0 4px;
+    max-height:0;overflow:hidden;transition:max-height .45s var(--ease),padding .3s;
+  }
+  .feat-item.on .feat-detail{max-height:520px;padding:0 0 24px}
+  .feat-head{padding:17px 30px 17px 0}
+  .feat-item.on .feat-head{padding-left:14px}
+  .feat-head .arw{transform:translateY(-70%) rotate(45deg)}
+  .feat-item.on .feat-head .arw{transform:translateY(-20%) rotate(-135deg)}
+  .feat-detail h3{display:none}
+  .feat-detail p{font-size:13.4px;margin-bottom:16px}
+}
+
+/* ---- Timeline ---- */
+.rec{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.tl-panel{background:var(--navy-3);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px}
+.tl{position:relative;padding-left:28px}
+.tl::before{content:'';position:absolute;left:5px;top:9px;bottom:9px;width:1px;background:var(--line-2)}
+.tl-i{position:relative;padding-bottom:24px}
+.tl-i:last-child{padding-bottom:0}
+.tl-i::before{content:'';position:absolute;left:-27px;top:5px;width:11px;height:11px;border-radius:50%;background:var(--navy-3);border:2px solid var(--line-2);transition:border-color .4s,background .4s}
+.tl-i.in::before{border-color:var(--blue);background:var(--blue)}
+.tl-i:last-child.in::before{border-color:var(--green);background:var(--green)}
+.tl-day{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;color:var(--blue);margin-bottom:6px}
+.tl-t{font-size:14.5px;font-weight:600;margin-bottom:4px;letter-spacing:-.02em}
+.tl-d{font-size:12.8px;line-height:1.55;color:var(--dim)}
+
+/* ---- Dashboard ---- */
+.dash{background:var(--navy-3);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+.dash-bar{display:flex;align-items:center;gap:6px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--navy-2)}
+.dash-bar i{width:8px;height:8px;border-radius:50%;background:var(--line-2)}
+.dash-bar .t{margin-left:10px;font-family:var(--mono);font-size:10.5px;color:var(--faint);letter-spacing:.05em}
+.dash-body{padding:22px}
+.dash-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+.kpi{background:var(--navy-2);border:1px solid var(--line);border-radius:var(--r-sm);padding:15px}
+.kpi .k{font-size:10.5px;color:var(--faint);letter-spacing:.04em;margin-bottom:8px;line-height:1.35}
+.kpi .v{font-family:var(--mono);font-size:21px;font-weight:500;letter-spacing:-.05em}
+.kpi .v.up{color:var(--green)}
+.chart{display:flex;align-items:flex-end;gap:6px;height:106px;padding:14px;background:var(--navy-2);border:1px solid var(--line);border-radius:var(--r-sm)}
+.chart b{flex:1;background:var(--blue);border-radius:4px 4px 2px 2px;height:0;transition:height .9s var(--ease)}
+.chart b:nth-last-child(-n+2){background:var(--green)}
+.dash-foot{display:flex;justify-content:space-between;font-family:var(--mono);font-size:9.5px;color:var(--faint);margin-top:11px;letter-spacing:.07em;gap:14px;flex-wrap:wrap}
+
+/* ---- Proof ---- */
+.proof{padding:34px}
+.proof-head{display:flex;align-items:center;gap:14px;margin-bottom:22px;flex-wrap:wrap}
+.proof-av{width:50px;height:50px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;flex-shrink:0}
+.proof-name{font-size:16.5px;font-weight:700;letter-spacing:-.025em}
+.proof-role{font-size:12.4px;color:var(--dim);margin-top:2px}
+.proof-q{font-size:clamp(16px,1.8vw,20px);line-height:1.52;letter-spacing:-.022em;font-weight:500;margin-bottom:28px;padding-left:18px;border-left:3px solid var(--blue)}
+.proof-nums{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);padding-top:24px}
+.pn{padding-right:18px}
+.pn+.pn{padding-left:20px;border-left:1px solid var(--line)}
+.pn .v{font-family:var(--mono);font-size:27px;font-weight:500;letter-spacing:-.06em;line-height:1;color:var(--blue)}
+.pn .k{font-size:11.5px;color:var(--dim);margin-top:8px;line-height:1.4}
+.proof-foot{font-family:var(--mono);font-size:10.5px;color:var(--faint);letter-spacing:.07em;margin-top:22px;text-transform:uppercase}
+.proof-foot a{color:var(--blue)}
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.quote{background:var(--navy-3);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px}
+.quote p{font-size:14px;line-height:1.65;color:var(--text);margin-bottom:15px}
+.quote .attr{font-family:var(--mono);font-size:10.8px;color:var(--faint);line-height:1.65}
+
+/* ---- Audit ---- */
+.audit{display:grid;grid-template-columns:.94fr 1.06fr;gap:14px;align-items:stretch}
+.a-in,.a-out{background:var(--navy-3);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px}
+.a-out{border-color:rgba(62,157,255,.32);display:flex;flex-direction:column}
+.field{margin-bottom:17px}
+.field:last-child{margin-bottom:0}
+.field label{display:block;font-size:12.8px;font-weight:600;margin-bottom:7px}
+.field .hint{color:var(--faint);font-weight:400}
+.field input,.field select,.field textarea{
+  width:100%;padding:11px 14px;background:var(--input);border:1px solid var(--line-2);
+  border-radius:var(--r-sm);font-size:14px;transition:border-color .25s,box-shadow .25s;
+}
+.field input{font-family:var(--mono)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(62,157,255,.16)}
+.field textarea{min-height:96px;resize:vertical;line-height:1.55}
+.field select option{background:var(--input);color:var(--text)}
+.a-out h3{font-size:18px;margin-bottom:5px}
+.a-out .sub{font-size:12.6px;color:var(--dim);margin-bottom:20px}
+.ll{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.ll .l{font-size:13.2px;color:var(--body)}
+.ll .r{font-family:var(--mono);font-size:15.5px;font-weight:500;white-space:nowrap;color:var(--text)}
+.ll-total{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:22px 0 4px;margin-top:auto}
+.ll-total .l{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--blue)}
+.ll-total .r{font-family:var(--mono);font-size:clamp(26px,3.4vw,36px);font-weight:500;letter-spacing:-.06em;color:var(--green)}
+.a-cta{margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.a-cta p{font-size:11.8px;color:var(--faint);margin-bottom:14px;line-height:1.55}
+.a-saved{font-family:var(--mono);font-size:11px;color:var(--green);margin-top:12px;display:none;letter-spacing:.05em}
+.a-saved.show{display:block}
+
+
+/* ---- Dark components inside light sections ---- */
+.dark-panel{
+  --text:#F0F5FA; --body:#B9C7D8; --dim:#8DA0B6; --faint:#6F8399;
+  --line:rgba(255,255,255,.11); --line-2:rgba(255,255,255,.2);
+  --navy-2:#0E1A2A; --navy-3:#0A1420; --raise:#1A2E44; --input:#132436;
+  --green-tint:rgba(52,211,153,.12); --blue-tint:rgba(62,157,255,.12);
+  background:#0A1420;color:var(--text);
+  border:1px solid rgba(255,255,255,.11);border-radius:26px;
+  position:relative;overflow:hidden;
+}
+.dark-panel::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--green);
+  transform:scaleX(0);transform-origin:left;transition:transform 1s var(--ease);z-index:3;
+}
+.dark-panel.in::after{transform:scaleX(1)}
+.light .dark-panel h2,.light .dark-panel h3{font-weight:700}
+
+/* FAQ shell */
+.faq-shell{max-width:860px;margin:0 auto;padding:6px 34px}
+.faq-shell .faq{max-width:none;border-top:none}
+.faq-shell .faq-i:last-child{border-bottom:none}
+@media (max-width:700px){.faq-shell{padding:4px 22px;border-radius:20px}}
+
+/* ---- Pricing: a dark slab sitting on the ivory section ---- */
+.slab{
+  --text:#F0F5FA; --body:#B9C7D8; --dim:#8DA0B6; --faint:#6F8399;
+  --line:rgba(255,255,255,.11); --line-2:rgba(255,255,255,.2);
+  background:#0A1420;color:var(--text);
+  border-radius:28px;padding:40px;position:relative;overflow:hidden;
+}
+.slab::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--green);
+  transform:scaleX(0);transform-origin:left;transition:transform 1.1s var(--ease);
+}
+.slab.in::before{transform:scaleX(1)}
+
+.plans{display:grid;grid-template-columns:1.38fr 1fr;gap:20px;align-items:stretch}
+
+/* headline plan */
+.plan-hero{
+  background:#0E1A2A;border:1px solid rgba(62,157,255,.4);border-radius:20px;
+  padding:34px;display:flex;flex-direction:column;position:relative;
+}
+.plan-hero .tagline{
+  position:absolute;top:-11px;left:34px;background:var(--green);color:#06281D;
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:700;padding:4px 12px;border-radius:var(--r-pill);
+}
+.plan-hero h3{font-size:24px;margin-bottom:8px;color:#F0F5FA}
+.plan-hero .who{font-size:13.5px;color:var(--dim);line-height:1.55;max-width:42ch}
+.price-row{display:flex;align-items:flex-end;gap:14px;margin:26px 0 8px;flex-wrap:wrap}
+.price-big{font-family:var(--mono);font-size:clamp(46px,6vw,66px);font-weight:500;letter-spacing:-.06em;line-height:.95;color:#F0F5FA}
+.price-unit{font-family:var(--mono);font-size:11px;letter-spacing:.13em;color:var(--faint);padding-bottom:9px}
+.price-meta{font-size:13px;color:var(--dim);padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.feat2{display:grid;grid-template-columns:1fr 1fr;gap:9px 24px;list-style:none;margin-bottom:26px;flex:1}
+.feat2 li{font-size:13.2px;line-height:1.45;padding-left:23px;position:relative;color:var(--body)}
+.feat2 li::before{content:'';position:absolute;left:0;top:5px;width:11px;height:6px;border-left:2px solid var(--green);border-bottom:2px solid var(--green);transform:rotate(-45deg)}
+
+/* compact plans */
+.plan-stack{display:flex;flex-direction:column;gap:20px}
+.plan-mini{
+  background:transparent;border:1px solid var(--line);border-radius:20px;padding:26px 28px;
+  display:flex;flex-direction:column;flex:1;transition:border-color .35s,background .35s,transform .35s var(--ease);
+}
+.plan-mini:hover{border-color:var(--line-2);background:rgba(255,255,255,.03);transform:translateY(-3px)}
+.mini-top{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:6px}
+.plan-mini h3{font-size:18px;color:#F0F5FA}
+.mini-price{font-family:var(--mono);font-size:27px;font-weight:500;letter-spacing:-.05em;color:#F0F5FA;white-space:nowrap}
+.mini-price small{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--faint);margin-left:4px}
+.plan-mini .who{font-size:12.6px;color:var(--dim);line-height:1.5;margin-bottom:14px}
+.mini-meta{font-size:11.8px;color:var(--faint);padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:14px;font-family:var(--mono);letter-spacing:.02em}
+.mini-list{list-style:none;margin-bottom:20px;flex:1}
+.mini-list li{font-size:12.5px;line-height:1.5;padding:4px 0 4px 20px;position:relative;color:var(--body)}
+.mini-list li::before{content:'';position:absolute;left:0;top:12px;width:8px;height:1px;background:var(--green)}
+.mini-list li.off{color:var(--faint)}
+.mini-list li.off::before{background:var(--faint)}
+
+/* guarantee bar inside the slab */
+.slab-foot{
+  display:flex;align-items:center;gap:20px;margin-top:20px;padding:24px 28px;
+  background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.32);border-radius:20px;
+}
+.slab-foot .gi{width:40px;height:40px;border-radius:11px;background:rgba(52,211,153,.2);border:1px solid rgba(52,211,153,.42);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.slab-foot .gt{font-size:15.5px;font-weight:700;margin-bottom:6px;letter-spacing:-.025em;color:#F0F5FA}
+.slab-foot p{font-size:13px;line-height:1.6;color:#B9C7D8}
+
+@media (max-width:960px){
+  .plans{grid-template-columns:1fr}
+  .plan-stack{flex-direction:row}
+  .plan-mini{flex:1}
+}
+@media (max-width:700px){
+  .slab{padding:24px;border-radius:22px}
+  .plan-hero{padding:26px}
+  .plan-hero .tagline{left:26px}
+  .feat2{grid-template-columns:1fr}
+  .plan-stack{flex-direction:column}
+  .slab-foot{flex-direction:column;align-items:flex-start;gap:14px;padding:22px}
+}
+
+/* ---- Integrations: capability matrix ---- */
+.mx-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.mx{width:100%;min-width:720px;border-collapse:collapse;font-size:13px}
+.mx thead th{
+  text-align:left;padding:20px 16px;vertical-align:top;
+  border-bottom:1px solid var(--line-2);background:var(--navy-2);
+}
+.mx thead th:first-child{
+  position:sticky;left:0;z-index:2;background:var(--navy-2);
+  border-right:1px solid var(--line);min-width:230px;
+}
+.mx-tier{font-family:var(--mono);font-size:10px;letter-spacing:.15em;color:var(--green);font-weight:700;margin-bottom:7px}
+.mx-name{font-size:14.5px;font-weight:700;letter-spacing:-.02em;margin-bottom:5px;color:var(--text)}
+.mx-desc{font-size:11.5px;line-height:1.45;color:var(--dim);font-weight:400}
+.mx-lead{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--faint);font-weight:500;text-transform:uppercase}
+
+.mx tbody td{padding:0;border-bottom:1px solid var(--line);text-align:center}
+.mx tbody tr:last-child td{border-bottom:none}
+.mx tbody th{
+  text-align:left;font-weight:500;font-size:13.2px;color:var(--body);
+  padding:15px 16px;border-bottom:1px solid var(--line);
+  position:sticky;left:0;z-index:1;background:var(--navy-3);border-right:1px solid var(--line);
+}
+.mx tbody tr:last-child th{border-bottom:none}
+.mx tbody tr.always th{color:var(--text);font-weight:600}
+.mx tbody tr.always td,.mx tbody tr.always th{background:var(--green-tint)}
+.mx tbody tr:hover td,.mx tbody tr:hover th{background:var(--raise)}
+.mx tbody tr.always:hover td,.mx tbody tr.always:hover th{background:rgba(52,211,153,.18)}
+
+.dot{
+  display:inline-block;width:11px;height:11px;border-radius:50%;
+  transform:scale(0);transition:transform .45s var(--ease);
+}
+.mx.in .dot{transform:scale(1)}
+.dot.yes{background:var(--green)}
+.dot.part{background:transparent;border:2px solid var(--blue)}
+.dot.no{width:12px;height:2px;border-radius:2px;background:var(--faint);opacity:.7}
+.mx-key{display:flex;gap:22px;flex-wrap:wrap;margin-top:20px;font-size:12px;color:var(--dim)}
+.mx-key span{display:flex;align-items:center;gap:8px}
+.mx-key .dot{transform:scale(1);transition:none;flex-shrink:0}
+.mx-hint{font-size:11.5px;color:var(--faint);margin-top:14px;display:none}
+
+@media (max-width:780px){
+  .mx-hint{display:block}
+  .mx thead th{padding:16px 12px}
+  .mx thead th:first-child{min-width:190px}
+  .mx tbody th{padding:13px 12px;font-size:12.6px}
+  .mx-key{gap:16px;font-size:11.5px}
+}
+
+/* ---- Compliance ---- */
+.comp{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.comp-i{background:var(--navy-3);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.comp-i .ci{width:34px;height:34px;border-radius:9px;background:var(--green-tint);border:1px solid rgba(52,211,153,.3);display:flex;align-items:center;justify-content:center;font-size:15px;margin-bottom:15px}
+.comp-i .ct{font-size:14.2px;font-weight:600;margin-bottom:7px;letter-spacing:-.02em}
+.comp-i p{font-size:12.4px;line-height:1.55;color:var(--dim)}
+
+/* ---- FAQ ---- */
+.faq{max-width:800px;margin:0 auto;border-top:1px solid var(--line)}
+.faq-i{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;text-align:left;padding:20px 50px 20px 0;font-size:15px;font-weight:600;position:relative;letter-spacing:-.022em;transition:color .25s}
+.faq-q:hover{color:var(--blue)}
+.faq-q::after{content:'';position:absolute;right:6px;top:50%;width:9px;height:9px;border-right:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:translateY(-70%) rotate(45deg);transition:transform .3s var(--ease)}
+.faq-i.open .faq-q{color:var(--blue)}
+.faq-i.open .faq-q::after{transform:translateY(-20%) rotate(-135deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .36s var(--ease)}
+.faq-a p{padding:0 50px 22px 0;font-size:13.6px;line-height:1.68;color:var(--dim)}
+
+/* ---- Contact ---- */
+.contact{display:grid;grid-template-columns:.82fr 1.18fr;gap:14px;align-items:start}
+.cf,.cside{background:var(--navy-3);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.formmsg{display:none;margin-top:14px;padding:12px 14px;font-size:12.8px;border-radius:var(--r-sm)}
+.formmsg.show{display:block}
+.formmsg.ok{background:var(--green-tint);border:1px solid rgba(52,211,153,.42);color:var(--green)}
+.formmsg.bad{background:rgba(240,163,135,.12);border:1px solid rgba(240,163,135,.42);color:var(--warn)}
+.cs-i{padding:16px 0;border-bottom:1px solid var(--line)}
+.cs-i:first-child{padding-top:0}
+.cs-i:last-child{border-bottom:none;padding-bottom:0}
+.ck{font-family:var(--mono);font-size:9.8px;letter-spacing:.13em;text-transform:uppercase;color:var(--blue);margin-bottom:7px}
+.cv{font-size:13.4px;color:var(--body);line-height:1.55}
+
+
+/* ---- Spacer between the last section and the footer ---- */
+.tailspace{padding:64px 0 0}
+.tailspace .rule{
+  max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);
+}
+.tailspace .rule i{
+  display:block;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.14) 18%,rgba(255,255,255,.14) 82%,transparent);
+}
+@media (max-width:600px){.tailspace{padding:44px 0 0}}
+
+/* ---- Footer ---- */
+footer{background:#0A1420;border-top:1px solid rgba(255,255,255,.1);padding:58px 0 26px;color:#B9C7D8}
+.f-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:38px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1)}
+.f-brand .logo{margin-bottom:0}
+.f-brand p{font-size:12.8px;line-height:1.65;max-width:32ch;margin-top:13px;color:#8DA0B6}
+.f-col h4{font-family:var(--mono);font-size:9.8px;letter-spacing:.15em;text-transform:uppercase;color:#6F8399;margin-bottom:15px;font-weight:500}
+.f-col a{display:block;font-size:13.2px;color:#8DA0B6;margin-bottom:10px;transition:color .2s}
+.f-col a:hover{color:#3E9DFF}
+.f-bot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:22px}
+.f-copy{font-family:var(--mono);font-size:10.2px;color:#6F8399;letter-spacing:.07em}
+.f-badges{display:flex;gap:9px;flex-wrap:wrap}
+.f-badge{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:9.8px;letter-spacing:.07em;color:#8DA0B6;border:1px solid rgba(255,255,255,.12);border-radius:var(--r-pill);padding:6px 12px}
+
+/* ---- Reveal ---- */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* ---- Responsive ---- */
+@media (max-width:1040px){
+  .hero-grid,.audit,.contact,.rec{grid-template-columns:1fr;gap:44px}
+  .phone-stage{order:-1}
+  .gates{grid-template-columns:repeat(2,1fr)}
+  .gate,.gate+.gate{padding-left:0;border-left:none;padding-right:18px}
+  .gate::before,.gate+.gate::before{left:0;right:18px}
+  .gate{border-top:1px solid var(--line);padding-top:20px;margin-top:-1px}
+  .comp{grid-template-columns:repeat(2,1fr)}
+  .f-top{grid-template-columns:1fr 1fr}
+  .dash-kpis{grid-template-columns:repeat(2,1fr)}
+  .proof-nums{grid-template-columns:1fr 1fr;gap:20px 0}
+  .pn+.pn{padding-left:0;border-left:none}
+  .pn:nth-child(even){padding-left:20px;border-left:1px solid var(--line)}
+}
+@media (max-width:800px){
+  :root{--pad:18px}
+  section{padding:60px 0}
+  .hero{padding:30px 0 52px}
+  nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#0A1420;border-bottom:1px solid rgba(255,255,255,.1);max-height:0;overflow:hidden;opacity:0;transition:max-height .34s var(--ease),opacity .28s}
+  nav.open{max-height:460px;opacity:1}
+  nav a{padding:14px var(--pad);border-bottom:1px solid rgba(255,255,255,.08);font-size:14.5px}
+  nav a.btn{margin:14px var(--pad);border-bottom:none;justify-content:center}
+  .burger{display:flex}
+  .hstats{grid-template-columns:1fr}
+  .hstat+.hstat{padding-left:0;border-left:none;border-top:1px solid var(--line)}
+  .quotes{grid-template-columns:1fr}
+  .cf-row{grid-template-columns:1fr}
+  .leak-out{gap:24px}
+}
+@media (max-width:560px){
+  .gates,.comp{grid-template-columns:1fr}
+  .f-top{grid-template-columns:1fr;gap:28px}
+  .a-in,.a-out,.cf,.cside,.proof,.tl-panel{padding:22px}
+  .proof-nums{grid-template-columns:1fr 1fr}
+}
+
+/* ================= MOBILE PASS ================= */
+@media (max-width:600px){
+  h1{font-size:29px;line-height:1.12}
+  h2{font-size:23px;line-height:1.18}
+  .lead{font-size:15px}
+  section{padding:52px 0}
+  .hero{padding:24px 0 46px}
+  .sec-head{margin-bottom:34px}
+  .hero-cta{gap:10px}
+  .hero-cta .btn{width:100%}
+  .label{font-size:10.5px;letter-spacing:.12em}
+
+  /* phone must never exceed the viewport */
+  .phone-wrap{width:100%;max-width:290px}
+  .phone{width:100%;height:auto;min-height:600px}
+  .ambient-ring{display:none}
+
+  /* leak stream */
+  .stream{margin-top:18px}
+  .gate{padding-right:0}
+  .gate-pct{font-size:26px}
+  .toggle{width:100%}
+  .toggle button{flex:1;padding:10px 8px;font-size:12.5px}
+
+  /* walkthrough */
+  .flow{padding:18px;border-radius:20px}
+  .flow-say h3{font-size:17px}
+  .flow-log{padding:14px;min-height:0;border-radius:13px}
+  .lrow{grid-template-columns:48px 1fr;gap:9px}
+  .lrow .msg{font-size:12px}
+  .flow-foot{gap:12px}
+
+  /* feature explorer */
+  .feat-head{padding:15px 28px 15px 0}
+  .feat-t{font-size:14.5px}
+  .feat-detail li{font-size:12.8px}
+
+  /* matrix */
+  .mx-wrap{border-radius:18px}
+  table.mx{min-width:600px;font-size:12.5px}
+  .mx thead th{padding:14px 11px}
+  .mx thead th:first-child{min-width:158px}
+  .mx-name{font-size:13px}
+  .mx-desc{font-size:10.8px}
+  .mx tbody th{padding:12px 11px;font-size:12px}
+
+  /* proof */
+  .proof{padding:24px;border-radius:20px}
+  .proof-q{font-size:16px;padding-left:14px;margin-bottom:24px}
+  .proof-head{gap:12px}
+  .proof-av{width:44px;height:44px;font-size:15px}
+  .proof-name{font-size:15.5px}
+  .proof-role{font-size:11.8px}
+  .pn .v{font-size:23px}
+  .pn .k{font-size:11px}
+
+  /* audit */
+  .a-in,.a-out{padding:22px;border-radius:18px}
+  .ll .l{font-size:13px}
+  .ll .r{font-size:15px}
+  .ll-total{padding-top:18px}
+
+  /* pricing slab */
+  .slab{padding:18px;border-radius:20px}
+  .plan-hero{padding:22px;border-radius:16px}
+  .plan-hero .tagline{left:22px;font-size:9px}
+  .plan-hero h3{font-size:21px}
+  .price-big{font-size:44px}
+  .plan-mini{padding:20px;border-radius:16px}
+  .mini-price{font-size:24px}
+  .slab-foot{padding:20px;border-radius:16px}
+
+  /* faq */
+  .faq-shell{padding:2px 18px;border-radius:18px}
+  .faq-q{font-size:14.2px;padding:17px 40px 17px 0}
+  .faq-a p{padding-right:34px;font-size:13.2px}
+
+  /* contact + footer */
+  .cf,.cside{padding:22px;border-radius:18px}
+  .f-bot{flex-direction:column;align-items:flex-start;gap:14px}
+}
+
+@media (max-width:380px){
+  :root{--pad:15px}
+  h1{font-size:26px}
+  .phone{min-height:560px}
+  .chat-body{min-height:340px;padding-bottom:70px}
+  .bubble{font-size:12.4px;max-width:88%}
+  table.mx{min-width:520px}
+  .price-big{font-size:38px}
+}
+
+
+/* ===== GLOBAL MOBILE SAFETY LAYER ===== */
+@media (max-width:600px){
+  html,body{max-width:100%;overflow-x:hidden}
+  img,video,svg,table,pre{max-width:100%}
+  h1,h2,h3{overflow-wrap:break-word;word-break:normal;hyphens:none}
+  .btn{max-width:100%}
+  .cta-row{width:100%}
+  .wrap>*{min-width:0}
+  /* never let a grid child force the page wider than the viewport */
+  [class*="grid"]>*,.bento>*,.tiers>*,.comp>*,.rel>*,.nots>*,.tiers-lite>*{min-width:0}
+}
+@media (max-width:400px){
+  :root{--pad:14px}
+  .btn{padding:12px 18px;font-size:13.5px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+  .bub,.booked{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hdr">
+    <a href="index.html" class="logo"><span class="mark">C</span>Clinairo</a>
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#audit">Free Audit Calculator</a>
+      <a href="features.html">Features</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn-primary btn-sm">Book Free Consultation</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===== HERO (dark) ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="label rv">AI Patient Revenue Operations · Medical Spas</div>
+      <h1 class="rv">Your Consultations Are Worth More Than the <span class="hl">Follow-Up</span> You're Giving Them.</h1>
+      <p class="lead rv">Clinairo helps aesthetic practices capture inquiries, protect consultations, recover the patients who didn't book on the day — and measure the revenue that comes back.</p>
+      <div class="hero-cta rv">
+        <a href="#audit" class="btn btn-primary">Run My Consult Audit</a>
+        <a href="#system" class="btn btn-ghost">See How It Works</a>
+      </div>
+      <div class="hstats">
+        <div class="hstat rv"><div class="v num">15–25%</div><div class="k">of unconverted consults are recoverable within 30 days</div></div>
+        <div class="hstat rv"><div class="v num">$1.39M</div><div class="k">average annual revenue per US med spa location</div></div>
+        <div class="hstat rv"><div class="v num">81%</div><div class="k">of US med spas are single-location, owner-operated</div></div>
+      </div>
+    </div>
+
+    <div class="rv">
+      <div class="phone-stage">
+        <div class="phone-wrap">
+          <div class="ambient-ring"></div>
+          <div class="ambient-ring"></div>
+          <div class="phone">
+            <div class="chat-header">
+              <div class="chat-avatar">AI</div>
+              <div><div class="chat-title">Clinairo Assistant</div><div class="chat-status">● Online</div></div>
+            </div>
+            <div class="chat-body" id="chatBody"></div>
+            <div class="confirm-card" id="confirmCard"><div class="check-circle">✓</div><span>Appointment Confirmed</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="phone-cap">Day 4 after an undecided consultation</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROBLEM (dark alt) ===== -->
+<section class="alt" id="problem">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label rv">The Revenue Leak Map</div>
+      <h2 class="rv">A Patient Has to Survive Five Leaks to Become Revenue.</h2>
+      <p class="lead rv">Most practices plug the first one and call it solved. Each figure is the share of remaining inquiries lost at that stage.</p>
+    </div>
+
+    <div class="rv">
+      <div class="toggle" role="group" aria-label="Compare">
+        <button id="btnLeak" class="on">Front Desk Alone</button>
+        <button id="btnFix">With Clinairo</button>
+      </div>
+
+      <svg class="stream" id="stream" viewBox="0 0 1120 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A stream of 100 inquiries narrowing across five leak points, ending with the number who become patients.">
+        <line class="rail" x1="30" y1="200" x2="1090" y2="200"/>
+        <g id="ticks"></g>
+        <path class="ribbon" id="ribbon" d=""/>
+        <g id="drops"></g>
+        <text class="cap" x="30" y="232">100 INQUIRIES IN</text>
+        <text class="startn" x="30" y="52">100</text>
+        <text class="cap" x="1090" y="232" text-anchor="end">BECOME PATIENTS</text>
+        <text class="big" id="endNum" x="1090" y="52" text-anchor="end">11</text>
+      </svg>
+    </div>
+
+    <div class="gates" id="gateGrid">
+      <div class="gate rv">
+        <div class="gate-n">LEAK 01</div><div class="gate-pct num">25%</div><div class="gate-sub">Lost here</div>
+        <h3>Nobody picks up</h3>
+        <p>Calls arriving after hours, during treatments and at lunch go to voicemail. Most never call back.</p>
+        <div class="gate-fix">↳ AI receptionist, 24/7</div>
+      </div>
+      <div class="gate rv">
+        <div class="gate-n">LEAK 02</div><div class="gate-pct num">20%</div><div class="gate-sub">Lost here</div>
+        <h3>The reply comes too late</h3>
+        <p>Form fills answered hours later. She has already called two competitors and booked with whoever replied first.</p>
+        <div class="gate-fix">↳ Response in under a minute</div>
+      </div>
+      <div class="gate rv">
+        <div class="gate-n">LEAK 03</div><div class="gate-pct num">20%</div><div class="gate-sub">Lost here</div>
+        <h3>The consult no-shows</h3>
+        <p>Booked, forgotten, gone. Full acquisition cost paid for an empty chair and an idle provider.</p>
+        <div class="gate-fix">↳ Reminders + no-show rescue</div>
+      </div>
+      <div class="gate rv">
+        <div class="gate-n">LEAK 04 · LARGEST</div><div class="gate-pct num">67%</div><div class="gate-sub">Lost here</div>
+        <h3>She leaves undecided</h3>
+        <p>She showed up, liked you, said she'd think about it. Nobody followed up. The most expensive leak in the practice.</p>
+        <div class="gate-fix">↳ Consult Recovery, 21 days</div>
+      </div>
+      <div class="gate rv">
+        <div class="gate-n">LEAK 05</div><div class="gate-pct num">30%</div><div class="gate-sub">Lost here</div>
+        <h3>She goes quiet</h3>
+        <p>Treated once, never rebooked. Her neurotoxin wore off around week twelve and she went somewhere that reminded her.</p>
+        <div class="gate-fix">↳ Treatment-cycle recall</div>
+      </div>
+    </div>
+
+    <p class="leak-note rv" id="leakNote">Eleven out of a hundred. The other eighty-nine cost exactly as much to reach.</p>
+  </div>
+</section>
+
+<!-- ===== SYSTEM (light) ===== -->
+<section class="light" id="system">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="label rv">The Product</div>
+      <h2 class="rv">One System, From First Call to Recovered Revenue</h2>
+      <p class="lead rv">Every channel your patients use flows into one place — which works with the software you already run, and keeps going long after the call ends.</p>
+    </div>
+
+    <div class="flow dark-panel rv" id="flow">
+      <div class="flow-rail" id="rail">
+        <div class="prog" id="prog"></div>
+        <button class="fstep" data-i="0"><span class="knob">1</span><span class="lbl">Inquiry arrives</span></button>
+        <button class="fstep" data-i="1"><span class="knob">2</span><span class="lbl">Qualified</span></button>
+        <button class="fstep" data-i="2"><span class="knob">3</span><span class="lbl">Consult booked</span></button>
+        <button class="fstep" data-i="3"><span class="knob">4</span><span class="lbl">Consult protected</span></button>
+        <button class="fstep" data-i="4"><span class="knob">5</span><span class="lbl">Outcome captured</span></button>
+        <button class="fstep" data-i="5"><span class="knob">6</span><span class="lbl">Recovered</span></button>
+      </div>
+
+      <div class="flow-body">
+        <div class="flow-say">
+          <span class="badge2" id="fBadge">Phone · 9:47 PM</span>
+          <div class="key" id="fKey">
+            <h3 id="fTitle">A call comes in after closing</h3>
+            <p id="fDesc">Nobody is at the desk. Clinairo picks up on the second ring, in natural conversation, and the caller never knows she rang outside opening hours.</p>
+          </div>
+          <div class="out" id="fOut">↳ Call answered, 1.4s</div>
+        </div>
+
+        <div class="flow-log">
+          <div class="log-top"><i></i><span>Live activity</span></div>
+          <div class="log-rows" id="logRows"></div>
+          <div class="flow-foot">
+            <span class="rev">ATTRIBUTED &nbsp;<b id="fRev">$0</b></span>
+            <button class="flow-play" id="fPlay">Pause</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MODULES (dark) ===== -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label rv">What's Included</div>
+      <h2 class="rv">Not Five Tools That Talk to Each Other. One That Already Knows.</h2>
+      <p class="lead rv">A patient who calls at 9pm, books, no-shows, gets rescheduled by text, comes in, leaves undecided, then books four days later is one continuous conversation — not five disconnected apps your front desk reconciles by hand every morning.</p>
+    </div>
+
+    <div class="feat rv" id="feat">
+      <div class="feat-list">
+
+        <div class="feat-item on">
+          <button class="feat-head"><span class="feat-num">01</span><span class="feat-t">AI receptionist</span><span class="arw"></span></button>
+          <div class="feat-detail">
+            <h3>AI receptionist</h3>
+            <p>Answers every call in natural conversation, around the clock, with no busy signal during a promotion. Trained on your treatment menu, your providers and your policies.</p>
+            <ul>
+              <li>Speaks the language — units, syringes, downtime, aftercare</li>
+              <li>Never gives clinical advice; medical questions route to your team</li>
+              <li>Handles several callers at once, so nobody hears a busy tone</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feat-item">
+          <button class="feat-head"><span class="feat-num">02</span><span class="feat-t">Booking at your platform's capability</span><span class="arw"></span></button>
+          <div class="feat-detail">
+            <h3>Booking at your platform's capability</h3>
+            <p>We confirm what your booking software actually allows before we promise anything — full write-back, event sync, calendar, or staff-assisted. You get the real answer for your plan during onboarding, not a sales claim.</p>
+            <ul>
+              <li>Four honest capability tiers, assigned after we check your plan</li>
+              <li>Calendar and staff-assisted paths work with any practice</li>
+              <li>Custom integration work priced into setup, never hidden</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feat-item">
+          <button class="feat-head"><span class="feat-num">03</span><span class="feat-t">Consult protection</span><span class="arw"></span></button>
+          <div class="feat-detail">
+            <h3>Consult protection</h3>
+            <p>Stop paying full acquisition cost for consultations that never happen. Confirmation, reminders and rescue, handled without anyone on your team remembering to do it.</p>
+            <ul>
+              <li>Reminder cascade at 72 hours, 24 hours and 3 hours</li>
+              <li>Intake collected before arrival, so the provider walks in prepared</li>
+              <li>No-show rescue within minutes of a missed slot</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feat-item">
+          <button class="feat-head"><span class="feat-num">04</span><span class="feat-t">Consult recovery</span><span class="feat-tagx">Core</span><span class="arw"></span></button>
+          <div class="feat-detail">
+            <h3>Consult recovery</h3>
+            <p>Your provider taps one button after the consultation — booked, thinking, price, or timing. That answer starts a 21-day text sequence written for that specific objection, referencing the treatment she discussed and the provider she saw.</p>
+            <ul>
+              <li>Stops the second she replies; your team only sees warm conversations</li>
+              <li>Text only — anything needing a voice goes to a human</li>
+              <li>Never opens with a discount, which just teaches patients to stall</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feat-item">
+          <button class="feat-head"><span class="feat-num">05</span><span class="feat-t">Human review queue</span><span class="arw"></span></button>
+          <div class="feat-detail">
+            <h3>Human review queue</h3>
+            <p>Anything that needs a person lands in one place with the full conversation, the reason it escalated, and a recommended next step.</p>
+            <ul>
+              <li>Medical questions, complaints and urgent concerns escalate instantly</li>
+              <li>High-value leads flagged for a human before they go cold</li>
+              <li>One-click handoff, with context already written for you</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feat-item">
+          <button class="feat-head"><span class="feat-num">06</span><span class="feat-t">Revenue attribution</span><span class="arw"></span></button>
+          <div class="feat-detail">
+            <h3>Revenue attribution</h3>
+            <p>Consultation, outcome, follow-up, booking, revenue — one traceable chain, measured against the baseline we record before we start. Recovered revenue becomes a number you can audit rather than a claim you have to trust.</p>
+            <ul>
+              <li>Baseline period measured before any changes go live</li>
+              <li>Influenced, recovered, booked and collected reported separately</li>
+              <li>Monthly report puts one number next to our invoice</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INTEGRATIONS (light) ===== -->
+<section class="light">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label rv">Integrations</div>
+      <h2 class="rv">We Tell You What Your Software Actually Allows</h2>
+      <p class="lead rv">Booking platforms differ enormously in what they open up, and some restrict API access by plan. We check your platform and your plan before onboarding, then place you in one of four honest tiers.</p>
+    </div>
+    <div class="mx-wrap dark-panel rv">
+      <table class="mx" id="mx">
+        <thead>
+          <tr>
+            <th scope="col"><span class="mx-lead">What you get</span></th>
+            <th scope="col"><div class="mx-tier">TIER A</div><div class="mx-name">Full</div><div class="mx-desc">Read, write and events. Requires API access on your plan.</div></th>
+            <th scope="col"><div class="mx-tier">TIER B</div><div class="mx-name">Event</div><div class="mx-desc">Live events in, plus whatever writes your platform permits.</div></th>
+            <th scope="col"><div class="mx-tier">TIER C</div><div class="mx-name">Calendar</div><div class="mx-desc">Google or Outlook scheduling. Works with any practice.</div></th>
+            <th scope="col"><div class="mx-tier">TIER D</div><div class="mx-name">Staff-assisted</div><div class="mx-desc">We capture and qualify; your team completes the booking.</div></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Answer calls and qualify patients, 24/7</th><td><span class="dot yes"></span></td><td><span class="dot yes"></span></td><td><span class="dot yes"></span></td><td><span class="dot yes"></span></td></tr>
+          <tr><th scope="row">Read live provider availability</th><td><span class="dot yes"></span></td><td><span class="dot part"></span></td><td><span class="dot yes"></span></td><td><span class="dot no"></span></td></tr>
+          <tr><th scope="row">Create the booking automatically</th><td><span class="dot yes"></span></td><td><span class="dot part"></span></td><td><span class="dot part"></span></td><td><span class="dot no"></span></td></tr>
+          <tr><th scope="row">Receive appointment and client events</th><td><span class="dot yes"></span></td><td><span class="dot yes"></span></td><td><span class="dot part"></span></td><td><span class="dot no"></span></td></tr>
+          <tr><th scope="row">Patient history and treatment recall</th><td><span class="dot yes"></span></td><td><span class="dot part"></span></td><td><span class="dot no"></span></td><td><span class="dot no"></span></td></tr>
+          <tr class="always"><th scope="row">Capture consultation outcomes</th><td><span class="dot yes"></span></td><td><span class="dot yes"></span></td><td><span class="dot yes"></span></td><td><span class="dot yes"></span></td></tr>
+          <tr class="always"><th scope="row">Run recovery sequences</th><td><span class="dot yes"></span></td><td><span class="dot yes"></span></td><td><span class="dot yes"></span></td><td><span class="dot yes"></span></td></tr>
+          <tr class="always"><th scope="row">Attribute recovered revenue</th><td><span class="dot yes"></span></td><td><span class="dot yes"></span></td><td><span class="dot yes"></span></td><td><span class="dot yes"></span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mx-key rv">
+      <span><i class="dot yes"></i> Included</span>
+      <span><i class="dot part"></i> Depends on your platform</span>
+      <span><i class="dot no"></i> Not available at this tier</span>
+    </div>
+    <p class="mx-hint rv">Scroll the table sideways to compare all four tiers.</p>
+  </div>
+</section>
+
+<!-- ===== RECOVERY (dark alt) ===== -->
+<section class="alt" id="recovery">
+  <div class="wrap rec">
+    <div>
+      <div class="label rv">The Wedge</div>
+      <h2 class="rv">She Said She'd Think About It. Then What?</h2>
+      <p class="lead rv">In most practices: nothing. The front desk is busy with the patients in the room, and by Friday nobody remembers Tuesday's consultation. She books somewhere else in March, or not at all.</p>
+      <p class="lead rv" style="margin-top:16px">Clinairo runs a text sequence built for the reason she hesitated — not a discount blast to everyone who walked out. Leading with a discount just teaches patients to stall.</p>
+      <div class="hero-cta rv" style="margin-top:28px;margin-bottom:0"><a href="#audit" class="btn btn-primary">See What Yours Is Worth</a></div>
+    </div>
+
+    <div class="tl-panel rv">
+      <div class="tl">
+        <div class="tl-i"><div class="tl-day">SAME DAY</div><div class="tl-t">Outcome captured</div><div class="tl-d">Provider taps one of four buttons. That's the entire ask on your team.</div></div>
+        <div class="tl-i"><div class="tl-day">DAY 1</div><div class="tl-t">Answer the actual objection</div><div class="tl-d">Price hesitation gets financing and package options. Timing gets a dated follow-up. Uncertainty gets before-and-afters for her specific treatment.</div></div>
+        <div class="tl-i"><div class="tl-day">DAY 4</div><div class="tl-t">A message that remembers</div><div class="tl-d">Her provider's name, the treatment she asked about, the date she came in. It reads like your front desk wrote it, because it learned how they write.</div></div>
+        <div class="tl-i"><div class="tl-day">DAY 10</div><div class="tl-t">Handed to a human</div><div class="tl-d">High-value consultations that haven't replied go to your team with full context and a suggested message. A person closes, not a robot.</div></div>
+        <div class="tl-i"><div class="tl-day">DAY 21</div><div class="tl-t">Closed or archived</div><div class="tl-d">She books, or moves to long-cycle nurture. Either way it's traced back to the consultation and the campaign that produced it.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DASHBOARD (dark) ===== -->
+<section>
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="label rv">Revenue Intelligence</div>
+      <h2 class="rv">One Number Next to Our Invoice</h2>
+      <p class="lead rv">Not "engagement." Not "interactions handled." Revenue recovered, traced back to the consultation and the campaign that produced it — measured against your own baseline from before we started.</p>
+    </div>
+
+    <div class="dash rv">
+      <div class="dash-bar"><i></i><i></i><i></i><span class="t">clinairo.com/dashboard — sample practice</span></div>
+      <div class="dash-body">
+        <div class="dash-kpis">
+          <div class="kpi"><div class="k">Calls answered</div><div class="v num" data-end="412">412</div></div>
+          <div class="kpi"><div class="k">Consults booked</div><div class="v num" data-end="58">58</div></div>
+          <div class="kpi"><div class="k">Recovered after "thinking"</div><div class="v num up" data-end="12">12</div></div>
+          <div class="kpi"><div class="k">Attributable recovered revenue</div><div class="v num up" data-end="34800" data-prefix="$">$34,800</div></div>
+        </div>
+        <div class="chart" id="chart"></div>
+        <div class="dash-foot"><span>LAST 30 DAYS</span><span>SAMPLE DASHBOARD — NOT CLIENT DATA</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROOF (light) ===== -->
+<section class="light">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label rv">Proof</div>
+      <h2 class="rv">One Real Client. Real Numbers. Nothing Invented.</h2>
+      <p class="lead rv">We publish results only from clinicians who agreed to be named, or who asked to stay anonymous and told us so. We would rather show you one verified result than three we made up.</p>
+    </div>
+
+    <div class="proof dark-panel rv">
+      <div class="proof-head">
+        <div class="proof-av">AS</div>
+        <div>
+          <div class="proof-name">Dr. Abubakar Siddique</div>
+          <div class="proof-role">Consultant Interventional &amp; Stroke Neurologist · MBBS, FCPS · 18 years</div>
+        </div>
+      </div>
+      <p class="proof-q">"I had a problem — sometimes I am not available, my assistants are not available. And I decided to use some artificial intelligence system for this purpose."</p>
+      <div class="proof-nums">
+        <div class="pn"><div class="v num" data-end="47">47</div><div class="k">after-hours inquiries handled per month</div></div>
+        <div class="pn"><div class="v num" data-end="31">31</div><div class="k">appointments booked by AI per month</div></div>
+        <div class="pn"><div class="v num" data-end="23">23</div><div class="k">missed calls recovered per month</div></div>
+        <div class="pn"><div class="v num">&lt;5s</div><div class="k">response time, at any hour</div></div>
+      </div>
+      <div class="proof-foot">Four months live · <a href="case-studies.html">Watch the video case study →</a></div>
+    </div>
+
+    <div class="quotes">
+      <div class="quote rv">
+        <p>"The follow-up is the part I didn't know I was missing. We were fine at answering the phone. We were terrible at week two."</p>
+        <div class="attr">Owner · aesthetic practice, Texas<br>Name withheld at client request</div>
+      </div>
+      <div class="quote rv">
+        <p>"My front desk stopped dreading the phone. That was worth it before we counted anything else."</p>
+        <div class="attr">Practice manager · multi-location med spa<br>Name withheld at client request</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AUDIT (dark alt) ===== -->
+<section class="alt" id="audit">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="label rv">Free · Takes 40 Seconds</div>
+      <h2 class="rv">The Consult Economics Audit</h2>
+      <p class="lead rv">Five numbers you already know, and the one figure nobody has shown you: what your unconverted consultations are worth. Calculated from your practice, not from an industry average.</p>
+    </div>
+
+    <div class="audit">
+      <div class="a-in rv">
+        <div class="field"><label for="aSpend">Monthly patient acquisition spend <span class="hint">— ads, everything</span></label><input type="number" id="aSpend" value="6000" min="0" step="100"></div>
+        <div class="field"><label for="aBooked">Consultations booked last month</label><input type="number" id="aBooked" value="40" min="0"></div>
+        <div class="field"><label for="aShow">Of those, how many showed up?</label><input type="number" id="aShow" value="32" min="0"></div>
+        <div class="field"><label for="aClose">How many purchased treatment?</label><input type="number" id="aClose" value="18" min="0"></div>
+        <div class="field"><label for="aLtv">Your average revenue per treatment patient <span class="hint">— first 12 months</span></label><input type="number" id="aLtv" value="3000" min="0" step="250"></div>
+      </div>
+
+      <div class="a-out rv">
+        <h3>Your Leak, In Dollars</h3>
+        <p class="sub">Recalculates as you type. Nothing is sent until you ask.</p>
+        <div class="ll"><span class="l">Acquisition cost per booked consultation</span><span class="r num" id="oCpc">$150</span></div>
+        <div class="ll"><span class="l">Spent on consultations that no-showed</span><span class="r num" id="oNoshow">$1,200</span></div>
+        <div class="ll"><span class="l">Showed up and left without purchasing</span><span class="r num" id="oUnd">14</span></div>
+        <div class="ll"><span class="l">Value sitting in that group</span><span class="r num" id="oUndVal">$42,000</span></div>
+        <div class="ll-total"><span class="l">Recoverable / year<sup>3</sup></span><span class="r num" id="oYear">$100,800</span></div>
+        <div class="a-cta">
+          <p><sup>3</sup> Modelled on recovering 20% of unconverted consultations — the midpoint of a published 15–25% benchmark. An estimate, not a promise. Send it over and we'll work through your real numbers with you.</p>
+          <button class="btn btn-green btn-block" id="auditSave">Get My Full Audit Breakdown</button>
+          <div class="a-saved" id="auditSaved">✓ Sent. We'll be in touch within one business day. <a href="https://calendly.com/contact-clinairo/30min" target="_blank" rel="noopener" style="color:var(--green);text-decoration:underline;text-underline-offset:3px">Or book a time now →</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING (light) ===== -->
+<section class="light" id="pricing">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="label rv">Pricing</div>
+      <h2 class="rv">Published, So You Don't Have to Sit Through a Call to Learn a Number</h2>
+      <p class="lead rv">Flat monthly with an included call allowance. We don't charge you more for getting busier.</p>
+    </div>
+
+    <div class="slab rv" id="slab">
+      <div class="plans">
+
+        <div class="plan-hero">
+          <span class="tagline">Where most practices start</span>
+          <h3>Growth</h3>
+          <p class="who">For practices already running ads and losing consultations they've paid for. Everything in Core, plus the recovery engine and the reporting that proves it worked.</p>
+
+          <div class="price-row">
+            <span class="price-big num" data-price="997">$997</span>
+            <span class="price-unit">PER MONTH</span>
+          </div>
+          <p class="price-meta">$2,500 one-time setup &middot; 1,000 call minutes included &middot; month to month, 30 days' notice</p>
+
+          <ul class="feat2">
+            <li>AI receptionist, 24/7</li>
+            <li>Booking at your confirmed tier</li>
+            <li>Consult protection &amp; deposits</li>
+            <li>No-show rescue</li>
+            <li>Consult recovery sequences</li>
+            <li>Treatment-cycle recall</li>
+            <li>Human review queue</li>
+            <li>Revenue attribution reporting</li>
+            <li>Two-way SMS &amp; missed-call text-back</li>
+            <li>Monthly performance review</li>
+          </ul>
+
+          <a href="#contact" class="btn btn-primary btn-block">Get Your Audit First</a>
+        </div>
+
+        <div class="plan-stack">
+          <div class="plan-mini">
+            <div class="mini-top"><h3>Core</h3><span class="mini-price num" data-price="597">$597</span></div>
+            <p class="who">Single location getting the phone under control.</p>
+            <div class="mini-meta">$1,500 SETUP &middot; 400 MINUTES</div>
+            <ul class="mini-list">
+              <li>AI receptionist, 24/7</li>
+              <li>Calendar or staff-assisted booking</li>
+              <li>Missed-call text-back &amp; SMS</li>
+              <li>Human review queue</li>
+              <li class="off">Consult recovery</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-block">Start With Core</a>
+          </div>
+
+          <div class="plan-mini">
+            <div class="mini-top"><h3>Scale</h3><span class="mini-price num" data-price="1997">$1,997</span></div>
+            <p class="who">Two or more locations with shared providers.</p>
+            <div class="mini-meta">FROM $4,000 SETUP &middot; 2,500 MINUTES</div>
+            <ul class="mini-list">
+              <li>Everything in Growth</li>
+              <li>Multi-location routing &amp; reporting</li>
+              <li>Custom integration work</li>
+              <li>WhatsApp channel</li>
+              <li>Weekly review &amp; dedicated support</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-block">Talk To Us</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slab-foot">
+        <div class="gi">&#128737;</div>
+        <div>
+          <div class="gt">90-Day Revenue Recovery Guarantee</div>
+          <p>For our first 20 practices: if Clinairo doesn't generate at least 3&times; your monthly fee in attributable recovered revenue over the first 90 days, we waive the following month. Attribution rules are agreed with you in writing before go-live, so there's no argument about what counts. Setup is non-refundable &mdash; it covers real integration work.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPLIANCE (dark) ===== -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label rv">Compliance</div>
+      <h2 class="rv">Built to Survive Your Compliance Officer's Questions</h2>
+    </div>
+    <div class="comp">
+      <div class="comp-i rv"><div class="ci">📄</div><div class="ct">Business Associate Agreements</div><p>Executed with every vendor in our stack that touches patient data. We'll send you the list and the architecture behind it.</p></div>
+      <div class="comp-i rv"><div class="ci">🔒</div><div class="ct">Minimal data footprint</div><p>Contact details, appointments, treatment interest and consultation outcomes. No clinical notes, no diagnoses, no treatment photography.</p></div>
+      <div class="comp-i rv"><div class="ci">📵</div><div class="ct">Consent-first outbound</div><p>Consent captured and timestamped before contact, contact hours set by the patient's time zone, opt-outs honoured instantly across every channel.</p></div>
+      <div class="comp-i rv"><div class="ci">📋</div><div class="ct">Audit-ready logs</div><p>Full activity history and call recordings with state-appropriate consent, exportable whenever your records require it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ (light) ===== -->
+<section class="light">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="label rv">Questions</div>
+      <h2 class="rv">The Ones That Actually Get Asked</h2>
+    </div>
+    <div class="faq-shell dark-panel rv">
+      <div class="faq">
+      <div class="faq-i"><button class="faq-q">Will patients know they're talking to AI?</button><div class="faq-a"><p>Yes — they're told. In practice it matters less than owners expect: patients care that someone answered at 8pm and got them booked. Anyone who asks for a person is transferred immediately.</p></div></div>
+      <div class="faq-i"><button class="faq-q">Which booking software do you work with?</button><div class="faq-a"><p>Platforms differ enormously in what they open up, and some restrict API access by plan — so rather than publish a logo wall, we check your specific platform and plan during onboarding and tell you exactly which of our four capability tiers you land in. Consultation recovery, outcome tracking and revenue attribution work at every tier.</p></div></div>
+      <div class="faq-i"><button class="faq-q">Does this replace my front desk?</button><div class="faq-a"><p>No, and we'd be suspicious of anyone selling it that way. It takes the repetitive work — after-hours calls, reminder chasing, follow-up nobody has time for — so your team can handle the nervous first-timer and the patient standing at the counter.</p></div></div>
+      <div class="faq-i"><button class="faq-q">Can it give patients medical advice?</button><div class="faq-a"><p>It's built specifically not to. It books, explains logistics and clinic-approved pricing, and escalates. Anything clinical — a reaction, a complication, a question about suitability — routes straight to your team with an alert. That boundary is enforced in the system, not left to the model's judgment.</p></div></div>
+      <div class="faq-i"><button class="faq-q">Do you call patients with an AI voice for follow-up?</button><div class="faq-a"><p>No. Follow-up is text only, and anything that needs a voice goes to a human on your team with full context. We took that decision deliberately — it's better for patients and it keeps you on the right side of telemarketing rules.</p></div></div>
+      <div class="faq-i"><button class="faq-q">How long until it's running?</button><div class="faq-a"><p>Core is typically live in seven to ten days. Growth depends on your platform's integration tier and usually runs two to four weeks. Most of that time is us learning your treatment menu, pricing rules and how your team actually talks to patients — the part that makes it not sound like a robot.</p></div></div>
+      <div class="faq-i"><button class="faq-q">What if it doesn't work for us?</button><div class="faq-a"><p>The 90-day guarantee above, with attribution rules agreed in writing before we start. After that it's month to month with 30 days' notice. No annual lock-in.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT (dark alt) ===== -->
+<section class="alt" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label rv">Get Started</div>
+      <h2 class="rv">Let's Find Your Leak</h2>
+      <p class="lead rv">Tell us about the practice and we'll come back with your consultation economics broken down properly — your numbers, not the calculator's defaults.</p>
+    </div>
+
+    <div class="contact">
+      <div class="cside rv">
+        <div class="cs-i"><div class="ck">What happens next</div><div class="cv">We reply within one business day with your audit. Prefer to talk first? <a href="https://calendly.com/contact-clinairo/30min" target="_blank" rel="noopener" class="hl">Book 30 minutes here.</a></div></div>
+        <div class="cs-i"><div class="ck">No obligation</div><div class="cv">The audit is yours whether or not you become a client.</div></div>
+        <div class="cs-i"><div class="ck">Direct</div><div class="cv"><a href="mailto:contact@clinairo.com" class="hl">contact@clinairo.com</a></div></div>
+      </div>
+
+      <div class="cf rv">
+        <form id="leadForm" novalidate>
+          <div class="cf-row">
+            <div class="field"><label for="fName">Your name</label><input type="text" id="fName" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="fClinic">Practice name</label><input type="text" id="fClinic" name="clinic" autocomplete="organization" required></div>
+          </div>
+          <div class="cf-row">
+            <div class="field"><label for="fEmail">Email</label><input type="email" id="fEmail" name="email" autocomplete="email" required></div>
+            <div class="field"><label for="fPhone">Phone</label><input type="tel" id="fPhone" name="phone" autocomplete="tel" required></div>
+          </div>
+          <div class="cf-row">
+            <div class="field"><label for="fType">Practice type</label>
+              <select id="fType" name="clinicType">
+                <option>Medical spa</option>
+                <option>Injectables / aesthetics clinic</option>
+                <option>Laser &amp; skin clinic</option>
+                <option>Aesthetic dermatology</option>
+                <option>Plastic surgery practice</option>
+                <option>Weight loss / wellness clinic</option>
+              </select>
+            </div>
+            <div class="field"><label for="fSoftware">Booking software</label>
+              <select id="fSoftware" name="software">
+                <option>Vagaro</option>
+                <option>Boulevard</option>
+                <option>Mangomint</option>
+                <option>Zenoti</option>
+                <option>Aesthetic Record</option>
+                <option>PatientNow</option>
+                <option>Pabau</option>
+                <option>Mindbody</option>
+                <option>Something else</option>
+                <option>Not sure</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label for="fMsg">What happens to patients who consult but don't book?</label><textarea id="fMsg" name="message" placeholder="Roughly how many consultations a month, and who follows up with the ones who don't purchase on the day?" required></textarea></div>
+          <button type="submit" class="btn btn-primary btn-block" id="leadBtn">Book Free Consultation</button>
+          <div class="formmsg ok" id="fOk">✓ Got it — we'll come back to you within one business day.<br><a href="https://calendly.com/contact-clinairo/30min" target="_blank" rel="noopener" style="color:var(--green);text-decoration:underline;text-underline-offset:3px;display:inline-block;margin-top:8px">Want to skip the wait? Book a time now →</a></div>
+          <div class="formmsg bad" id="fBad"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tailspace"><div class="rule"><i></i></div></div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-brand">
+        <div class="logo"><span class="mark">C</span>Clinairo</div>
+        <p>AI patient revenue operations for medical spas and aesthetic practices. Capture, protect and recover consultations &mdash; and measure the revenue that comes back.</p>
+      </div>
+      <div class="f-col"><h4>Product</h4><a href="features.html">Features</a><a href="index.html#system">How it works</a><a href="index.html#recovery">Consult recovery</a><a href="index.html#pricing">Pricing</a><a href="index.html#audit">Free audit</a></div>
+      <div class="f-col"><h4>Proof</h4><a href="case-studies.html">Case studies</a><a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a></div>
+      <div class="f-col"><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy policy</a><a href="terms.html">Terms</a></div>
+    </div>
+    <div class="f-bot">
+      <div class="f-copy">© 2026 CLINAIRO AUTOMATION INC.</div>
+      <div class="f-badges">
+        <span class="f-badge">&#128737; HIPAA COMPLIANT</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+if (typeof emailjs !== 'undefined') { emailjs.init("BKyye5PTrsbYuWN3g"); }
+var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* nav */
+(function(){
+  var b=document.getElementById('burger'),n=document.getElementById('nav');
+  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.classList.toggle('open',o);b.setAttribute('aria-expanded',o);});
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){
+    n.classList.remove('open');b.classList.remove('open');b.setAttribute('aria-expanded','false');});});
+})();
+
+/* reveal */
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(REDUCED||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){
+    if(!e.isIntersecting)return;
+    var sibs=[].slice.call(e.target.parentNode.children).filter(function(c){return c.classList.contains('rv');});
+    e.target.style.transitionDelay=Math.min(Math.max(0,sibs.indexOf(e.target))*70,350)+'ms';
+    e.target.classList.add('in');io.unobserve(e.target);
+  });},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+
+/* hero phone — sequence matches the existing site's bubble/confirm pattern */
+(function(){
+  var body=document.getElementById('chatBody'), card=document.getElementById('confirmCard');
+  var msgs=[
+    {r:'ai',     t:'Hi Marisa \u2014 it\u2019s Radiance. You saw Dr. Chen Tuesday about lip filler and wanted to think it over.',d:'2:14 PM'},
+    {r:'ai',     t:'She pulled a few before-and-afters with your lip shape.',d:'2:14 PM'},
+    {r:'patient',t:'that would help. worried about looking overdone',d:'2:31 PM'},
+    {r:'ai',     t:'Most common thing we hear. Dr. Chen starts at half a syringe for that reason.',d:'2:32 PM'},
+    {r:'patient',t:'ok. anything next week?',d:'2:36 PM'}
+  ];
+  var timers=[];
+  function run(){
+    timers.forEach(clearTimeout); timers=[];
+    body.innerHTML=''; card.classList.remove('show');
+    msgs.forEach(function(m,i){
+      var el=document.createElement('div');
+      el.className='bubble '+m.r;
+      el.innerHTML=m.t+'<span class="t">'+m.d+'</span>';
+      body.appendChild(el);
+      timers.push(setTimeout(function(){el.classList.add('show');}, REDUCED?0:(i*1150+400)));
+    });
+    timers.push(setTimeout(function(){card.classList.add('show');}, REDUCED?0:(msgs.length*1150+900)));
+  }
+  run();
+  if(!REDUCED) setInterval(run, msgs.length*1150+5600);
+})();
+
+/* leak stream — percentage of remaining lost at each gate.
+   Rates always improve, so nothing ever inverts. */
+(function(){
+  var RATES=[{b:25,f:5},{b:20,f:5},{b:20,f:10},{b:67,f:55},{b:30,f:18}];
+  var NS='http://www.w3.org/2000/svg';
+  var X=[30,222,414,606,798,990,1090];   /* start, 5 gates, output */
+  var MID=118, MAXH=74;
+
+  var svg=document.getElementById('stream'), ribbon=document.getElementById('ribbon');
+  var dropsG=document.getElementById('drops'), ticksG=document.getElementById('ticks');
+  var endNum=document.getElementById('endNum'), note=document.getElementById('leakNote');
+  var pcts=[].slice.call(document.querySelectorAll('.gate-pct'));
+  var gates=[].slice.call(document.querySelectorAll('.gate'));
+  var bL=document.getElementById('btnLeak'), bF=document.getElementById('btnFix');
+  if(!svg) return;
+
+  for(var i=1;i<=5;i++){
+    var l=document.createElementNS(NS,'line');
+    l.setAttribute('class','tick');
+    l.setAttribute('x1',X[i]); l.setAttribute('x2',X[i]);
+    l.setAttribute('y1',MID+MAXH+6); l.setAttribute('y2',200);
+    ticksG.appendChild(l);
+  }
+
+  function counts(fixed){
+    var out=[100], rem=100;
+    RATES.forEach(function(r){ rem-=Math.round(rem*((fixed?r.f:r.b)/100)); out.push(rem); });
+    out.push(rem);
+    return out;
+  }
+  function pathFor(c){
+    var half=c.map(function(n){return Math.max(2,(n/100)*MAXH);});
+    var top='M '+X[0]+' '+(MID-half[0]);
+    for(var i=1;i<X.length;i++) top+=' L '+X[i]+' '+(MID-half[i]);
+    for(var j=X.length-1;j>=0;j--) top+=' L '+X[j]+' '+(MID+half[j]);
+    return top+' Z';
+  }
+  function makeDrops(c,fixed){
+    dropsG.innerHTML='';
+    for(var i=1;i<=5;i++){
+      var lost=c[i-1]-c[i];
+      var n=Math.max(1,Math.min(9,Math.round(lost/3.5)));
+      for(var k=0;k<n;k++){
+        var cir=document.createElementNS(NS,'circle');
+        cir.setAttribute('class','drop');
+        cir.setAttribute('r', 2.6);
+        cir.setAttribute('cx', X[i]-16+Math.random()*32);
+        cir.setAttribute('cy', MID+Math.max(2,(c[i]/100)*MAXH)+4);
+        cir.style.animationDelay=(Math.random()*2.4).toFixed(2)+'s';
+        dropsG.appendChild(cir);
+      }
+    }
+  }
+  var current=counts(false);
+  function draw(target,fixed){
+    if(REDUCED){ current=target.slice(); ribbon.setAttribute('d',pathFor(current)); return; }
+    var from=current.slice(), t0=null;
+    requestAnimationFrame(function step(ts){
+      if(!t0)t0=ts;
+      var p=Math.min((ts-t0)/900,1), e=1-Math.pow(1-p,3);
+      current=from.map(function(v,i){return v+(target[i]-v)*e;});
+      ribbon.setAttribute('d',pathFor(current));
+      if(p<1) requestAnimationFrame(step); else { current=target.slice(); makeDrops(current,fixed); }
+    });
+  }
+  function count(el,target){
+    if(REDUCED){el.textContent=target;return;}
+    var start=parseInt(el.textContent,10)||0,t0=null;
+    requestAnimationFrame(function step(ts){
+      if(!t0)t0=ts;
+      var p=Math.min((ts-t0)/900,1), e=1-Math.pow(1-p,3);
+      el.textContent=Math.round(start+(target-start)*e);
+      if(p<1)requestAnimationFrame(step);
+    });
+  }
+  function apply(fixed){
+    var c=counts(fixed);
+    RATES.forEach(function(r,i){
+      pcts[i].textContent=(fixed?r.f:r.b)+'%';
+      gates[i].classList.toggle('fixed',fixed);
+      gates[i].classList.add('on');
+    });
+    svg.classList.toggle('good',fixed);
+    bL.classList.toggle('on',!fixed);
+    bF.classList.toggle('on',fixed); bF.classList.toggle('good',fixed);
+    draw(c,fixed); makeDrops(c,fixed); count(endNum,c[c.length-1]);
+    note.textContent = fixed
+      ? 'Same hundred inquiries, same acquisition spend \u2014 every leak narrowed, none of them magically closed. Your own figures come out of the audit below, and every number we quote you afterwards is calculated from your practice.'
+      : 'Eleven out of a hundred. The other eighty-nine cost exactly as much to reach.';
+  }
+  ribbon.setAttribute('d',pathFor(current)); makeDrops(current,false);
+  bL.addEventListener('click',function(){apply(false);});
+  bF.addEventListener('click',function(){apply(true);});
+  apply(false);
+
+  if(!REDUCED && 'IntersectionObserver' in window){
+    var shown=false;
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){
+      if(e.isIntersecting && !shown){ shown=true;
+        setTimeout(function(){apply(true);},1500);
+        setTimeout(function(){apply(false);},5200);
+        io.unobserve(e.target); }
+    });},{threshold:.25});
+    io.observe(document.getElementById('gateGrid'));
+  }
+})();
+
+/* product walkthrough — steps the system through a real patient */
+(function(){
+  var root=document.getElementById('flow');
+  if(!root)return;
+  var STEPS=[
+    {badge:'Phone · 9:47 PM', title:'A call comes in after closing',
+     desc:'Nobody is at the desk. Clinairo picks up on the second ring, in natural conversation, and the caller never knows she rang outside opening hours.',
+     out:'\u21b3 Call answered in 1.4s',
+     log:[['21:47','Inbound call \u2014 <b>+1 (415) \u2022\u2022\u2022 2288</b>'],['21:47','Clinairo answered \u2014 after-hours rule']], rev:0},
+    {badge:'Qualification', title:'She says what she actually wants',
+     desc:'Treatment interest, timing and whether she has been before \u2014 captured conversationally, not read off a script. Anything clinical is escalated instead of answered.',
+     out:'\u21b3 Interest: lip filler \u00b7 new patient',
+     log:[['21:48','Interest captured \u2014 <b>lip filler</b>'],['21:48','New patient \u00b7 no clinical questions raised']], rev:0},
+    {badge:'Booking', title:'The consultation goes on the schedule',
+     desc:'Clinairo checks real availability and places the consultation at whatever tier your booking platform allows \u2014 written straight in, or handed to your team as a complete task.',
+     out:'\u21b3 Tue 14 Jan, 2:00 PM \u00b7 Dr. Chen',
+     log:[['21:49','Availability checked \u00b7 Dr. Chen'],['21:49','<b>Consultation booked</b> \u2014 Tue 2:00 PM','good'],['21:49','Confirmation sent by text']], rev:0},
+    {badge:'Protection', title:'She actually turns up',
+     desc:'Reminders at 72 hours, 24 hours and 3 hours, intake collected before arrival. If she had missed it, rescue outreach would have gone out within fifteen minutes.',
+     out:'\u21b3 Attended \u00b7 intake complete',
+     log:[['Jan 11','Reminder sent \u00b7 72h'],['Jan 13','Reminder sent \u00b7 24h'],['Jan 14','<b>Attended</b> \u00b7 intake complete','good']], rev:0},
+    {badge:'Outcome', title:'She leaves without booking treatment',
+     desc:'Dr. Chen taps one button on the way out of the room: thinking. That single tap is the entire ask on your team, and it starts everything that follows.',
+     out:'\u21b3 Outcome: thinking \u00b7 recovery armed',
+     log:[['14:41','Outcome logged by provider \u2014 <b>thinking</b>'],['14:41','21-day recovery sequence armed']], rev:0},
+    {badge:'Recovery', title:'Four days later, she books',
+     desc:'A text written for her actual hesitation, referencing the treatment she discussed and the provider she saw. She replies, the sequence stops, and your team picks up a warm conversation.',
+     out:'\u21b3 Recovered \u00b7 traced to the original consult',
+     log:[['Jan 18','Recovery message sent \u00b7 objection: <b>uncertainty</b>'],['Jan 18','Patient replied \u2014 sequence stopped'],['Jan 18','<b>Treatment booked</b> \u00b7 attributed to consult #4471','good']], rev:2400}
+  ];
+
+  var steps=[].slice.call(root.querySelectorAll('.fstep'));
+  var prog=document.getElementById('prog'), rows=document.getElementById('logRows');
+  var badge=document.getElementById('fBadge'), title=document.getElementById('fTitle');
+  var desc=document.getElementById('fDesc'), out=document.getElementById('fOut');
+  var key=document.getElementById('fKey'), rev=document.getElementById('fRev');
+  var play=document.getElementById('fPlay');
+  var idx=-1, timer=null, running=!REDUCED;
+
+  function render(i){
+    var s=STEPS[i];
+    steps.forEach(function(el,n){
+      el.classList.toggle('on',n===i);
+      el.classList.toggle('done',n<i);
+    });
+    prog.style.width=(i/(STEPS.length-1)*100)+'%';
+    badge.textContent=s.badge;
+    key.classList.add('swap');
+    setTimeout(function(){
+      title.textContent=s.title; desc.textContent=s.desc;
+      key.classList.remove('swap');
+    }, REDUCED?0:180);
+    out.textContent=s.out;
+
+    if(i===0) rows.innerHTML='';
+    s.log.forEach(function(l,n){
+      var d=document.createElement('div');
+      d.className='lrow'+(l[2]?' '+l[2]:'');
+      d.innerHTML='<span class="ts">'+l[0]+'</span><span class="msg">'+l[1]+'</span>';
+      d.style.animationDelay=(REDUCED?0:n*160)+'ms';
+      rows.appendChild(d);
+    });
+    while(rows.children.length>7) rows.removeChild(rows.firstChild);
+
+    var total=0; for(var k=0;k<=i;k++) total+=STEPS[k].rev;
+    rev.textContent='$'+total.toLocaleString('en-US');
+  }
+  function go(i){ idx=(i+STEPS.length)%STEPS.length; render(idx); }
+  function tick(){ go(idx+1); }
+  function start(){ if(timer)clearInterval(timer); if(running) timer=setInterval(tick,3600); }
+
+  steps.forEach(function(el){
+    el.addEventListener('click',function(){
+      go(+el.dataset.i); running=false; play.textContent='Play';
+      if(timer)clearInterval(timer);
+    });
+  });
+  play.addEventListener('click',function(){
+    running=!running; play.textContent=running?'Pause':'Play';
+    if(running) start(); else if(timer) clearInterval(timer);
+  });
+
+  go(0);
+  if(REDUCED){ play.textContent='Play'; running=false; return; }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){
+      if(e.isIntersecting){ if(running) start(); }
+      else if(timer){ clearInterval(timer); timer=null; }
+    });},{threshold:.25});
+    io.observe(root);
+  } else start();
+})();
+
+/* counters — real values live in the HTML */
+(function(){
+  var els=[].slice.call(document.querySelectorAll('[data-end]'));
+  if(REDUCED||!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){
+    if(!e.isIntersecting)return;
+    var el=e.target,t=+el.dataset.end,pre=el.dataset.prefix||'',t0=null;
+    requestAnimationFrame(function step(ts){
+      if(!t0)t0=ts;
+      var p=Math.min((ts-t0)/1200,1),v=Math.round(t*(1-Math.pow(1-p,3)));
+      el.textContent=pre+v.toLocaleString('en-US');
+      if(p<1)requestAnimationFrame(step);else el.textContent=pre+t.toLocaleString('en-US');
+    });
+    io.unobserve(el);
+  });},{threshold:.4});
+  els.forEach(function(e){io.observe(e);});
+})();
+
+/* dashboard chart */
+(function(){
+  var c=document.getElementById('chart');
+  var h=[40,54,46,62,56,70,64,78,72,84,80,92];
+  h.forEach(function(){c.appendChild(document.createElement('b'));});
+  var bars=c.querySelectorAll('b');
+  function grow(){bars.forEach(function(b,i){setTimeout(function(){b.style.height=h[i]+'%';},REDUCED?0:i*60);});}
+  if(REDUCED||!('IntersectionObserver' in window)){grow();return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){
+    if(e.isIntersecting){grow();io.unobserve(e.target);}});},{threshold:.3});
+  io.observe(c);
+})();
+
+/* timeline */
+(function(){
+  var items=[].slice.call(document.querySelectorAll('.tl-i'));
+  if(REDUCED||!('IntersectionObserver' in window)){items.forEach(function(i){i.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.6});
+  items.forEach(function(i){io.observe(i);});
+})();
+
+
+/* feature explorer — tabs on desktop, accordion on mobile */
+(function(){
+  var root=document.getElementById('feat');
+  if(!root)return;
+  var items=[].slice.call(root.querySelectorAll('.feat-item'));
+
+  function sizeList(){
+    /* On desktop the detail panel is absolutely positioned, so the list has to
+       reserve enough height for the tallest panel or the section collapses. */
+    if(window.innerWidth<=900){ root.style.minHeight=''; return; }
+    var tallest=0;
+    items.forEach(function(it){
+      var d=it.querySelector('.feat-detail');
+      var prev=it.classList.contains('on');
+      if(!prev){ d.style.visibility='hidden'; d.style.opacity='0'; d.style.display='block'; }
+      tallest=Math.max(tallest,d.offsetHeight);
+      if(!prev){ d.style.display=''; d.style.visibility=''; d.style.opacity=''; }
+    });
+    var listH=root.querySelector('.feat-list').offsetHeight;
+    root.style.minHeight=Math.max(listH,tallest)+'px';
+  }
+
+  items.forEach(function(it){
+    it.querySelector('.feat-head').addEventListener('click',function(){
+      var isOn=it.classList.contains('on');
+      if(window.innerWidth<=900 && isOn){ it.classList.remove('on'); return; }
+      items.forEach(function(o){o.classList.remove('on');});
+      it.classList.add('on');
+    });
+  });
+
+  sizeList();
+  var t; window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(sizeList,150);});
+  window.addEventListener('load',sizeList);
+})();
+
+/* capability matrix — pop the markers in on first view */
+(function(){
+  var mx=document.getElementById('mx');
+  if(!mx)return;
+  if(REDUCED||!('IntersectionObserver' in window)){mx.classList.add('in');return;}
+  mx.querySelectorAll('tbody tr').forEach(function(tr,r){
+    tr.querySelectorAll('.dot').forEach(function(d,c){
+      d.style.transitionDelay=(r*55+c*70)+'ms';
+    });
+  });
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){
+    if(e.isIntersecting){mx.classList.add('in');io.unobserve(e.target);}
+  });},{threshold:.2});
+  io.observe(mx);
+})();
+
+/* pricing slab — accent sweep and price count-up */
+(function(){
+  var slab=document.getElementById('slab');
+  if(!slab)return;
+  var prices=[].slice.call(slab.querySelectorAll('[data-price]'));
+  function fill(){ prices.forEach(function(el){ el.textContent='$'+(+el.dataset.price).toLocaleString('en-US'); }); }
+  if(REDUCED||!('IntersectionObserver' in window)){slab.classList.add('in');fill();return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){
+    if(!e.isIntersecting)return;
+    slab.classList.add('in');
+    prices.forEach(function(el,i){
+      var t=+el.dataset.price, t0=null;
+      setTimeout(function(){
+        requestAnimationFrame(function step(ts){
+          if(!t0)t0=ts;
+          var p=Math.min((ts-t0)/900,1), v=Math.round(t*(1-Math.pow(1-p,3)));
+          el.textContent='$'+v.toLocaleString('en-US');
+          if(p<1)requestAnimationFrame(step); else el.textContent='$'+t.toLocaleString('en-US');
+        });
+      }, i*130);
+    });
+    io.unobserve(e.target);
+  });},{threshold:.25});
+  io.observe(slab);
+})();
+
+/* dark panels — accent sweep on first view */
+(function(){
+  var panels=[].slice.call(document.querySelectorAll('.dark-panel'));
+  if(!panels.length)return;
+  if(REDUCED||!('IntersectionObserver' in window)){panels.forEach(function(p){p.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+  });},{threshold:.15});
+  panels.forEach(function(p){io.observe(p);});
+})();
+
+/* FAQ */
+document.querySelectorAll('.faq-i').forEach(function(item){
+  var q=item.querySelector('.faq-q'),a=item.querySelector('.faq-a');
+  q.addEventListener('click',function(){
+    var open=item.classList.contains('open');
+    document.querySelectorAll('.faq-i.open').forEach(function(o){
+      o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+
+/* audit */
+var AUDIT={};
+(function(){
+  var f=function(n){return '$'+Math.round(n).toLocaleString('en-US');};
+  function calc(){
+    var spend=+document.getElementById('aSpend').value||0;
+    var booked=+document.getElementById('aBooked').value||0;
+    var showed=Math.min(+document.getElementById('aShow').value||0,booked);
+    var closed=Math.min(+document.getElementById('aClose').value||0,showed);
+    var val=+document.getElementById('aLtv').value||0;
+    var cpc=booked?spend/booked:0;
+    var noShowCost=Math.max(0,booked-showed)*cpc;
+    var und=Math.max(0,showed-closed);
+    var undVal=und*val;
+    var yearly=undVal*0.20*12;   /* 20% recovery, midpoint of published 15–25% */
+    document.getElementById('oCpc').textContent=f(cpc);
+    document.getElementById('oNoshow').textContent=f(noShowCost);
+    document.getElementById('oUnd').textContent=und;
+    document.getElementById('oUndVal').textContent=f(undVal);
+    document.getElementById('oYear').textContent=f(yearly);
+    AUDIT={adSpend:spend,consultsBooked:booked,consultsShowed:showed,consultsClosed:closed,
+      avgPatientValue:val,costPerConsult:Math.round(cpc),noShowCost:Math.round(noShowCost),
+      undecidedCount:und,undecidedValue:Math.round(undVal),annualRecoverable:Math.round(yearly)};
+    window.AUDIT=AUDIT;
+  }
+  ['aSpend','aBooked','aShow','aClose','aLtv'].forEach(function(id){
+    document.getElementById(id).addEventListener('input',calc);});
+  calc();
+})();
+</script>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const app = initializeApp({
+  projectId: "encouraging-trilogy-3mln4",
+  appId: "1:230726986369:web:007fd166f60dbad846bb80",
+  apiKey: "AIzaSyBxciRbRM8KdodljcRR1fcvhlGjw_ssmHo",
+  authDomain: "encouraging-trilogy-3mln4.firebaseapp.com",
+  storageBucket: "encouraging-trilogy-3mln4.firebasestorage.app",
+  messagingSenderId: "230726986369"
+});
+const db = getFirestore(app, "ai-studio-8e82f9d4-c284-4d8d-b0ab-f35167edd79d");
+
+const form=document.getElementById('leadForm'),ok=document.getElementById('fOk'),
+      bad=document.getElementById('fBad'),btn=document.getElementById('leadBtn');
+
+form.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  ok.classList.remove('show'); bad.classList.remove('show');
+  if(!form.checkValidity()){
+    bad.textContent="Please fill in every field so we can actually reach you.";
+    bad.classList.add('show'); return;
+  }
+  const d=new FormData(form), A=window.AUDIT||{};
+  const extras=[
+    `Practice type: ${d.get('clinicType')}`,
+    `Booking software: ${d.get('software')}`,
+    A.consultsBooked ? `Audit — ${A.consultsBooked} booked, ${A.consultsShowed} showed, ${A.consultsClosed} purchased, ${A.undecidedCount} unconverted worth $${(A.undecidedValue||0).toLocaleString('en-US')}` : null
+  ].filter(Boolean).join('\n');
+
+  const payload={
+    name:(d.get('name')||'').trim(),
+    clinicName:(d.get('clinic')||'').trim(),
+    email:(d.get('email')||'').trim(),
+    phone:(d.get('phone')||'').trim(),
+    message:`${extras}\n\n${(d.get('message')||'').trim()}`.slice(0,2000),
+    createdAt:serverTimestamp()
+  };
+
+  btn.disabled=true; const label=btn.textContent; btn.textContent='Sending…';
+  try{
+    await addDoc(collection(db,'consultation_requests'),payload);
+    ok.classList.add('show'); form.reset();
+    if(typeof gtag==='function'){gtag('event','generate_lead',{form_location:'homepage',practice_type:d.get('clinicType')||'',booking_software:d.get('software')||''});}
+    if(typeof emailjs!=='undefined'){
+      emailjs.send('service_03g4wbm','template_f4787gi',{
+        from_name:payload.name, clinic_name:payload.clinicName,
+        from_email:payload.email, phone:payload.phone, message:payload.message
+      }).catch(err=>console.error('Email notify failed (lead saved):',err));
+    }
+  }catch(err){
+    console.error('Lead submit failed:',err);
+    bad.textContent="Something went wrong sending that. Email us at contact@clinairo.com and we'll pick it up.";
+    bad.classList.add('show');
+  }finally{ btn.disabled=false; btn.textContent=label; }
+});
+
+const aBtn=document.getElementById('auditSave'), aSaved=document.getElementById('auditSaved');
+aBtn.addEventListener('click', async ()=>{
+  aBtn.disabled=true; const label=aBtn.textContent; aBtn.textContent='Saving…';
+  try{
+    // Requires the updated firestore.rules shipped alongside this file.
+    await addDoc(collection(db,'audit_submissions'),{
+      ...window.AUDIT, source:'homepage-consult-audit', submittedAt:serverTimestamp()
+    });
+    aSaved.classList.add('show');
+    if(typeof gtag==='function'){gtag('event','audit_submitted',{value:(window.AUDIT&&window.AUDIT.annualRecoverable)||0,currency:'USD'});}
+  }catch(err){ console.error('Audit save failed:',err); }
+  finally{
+    aBtn.disabled=false; aBtn.textContent=label;
+    document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+  }
+});
+
+/* ---- analytics events ---- */
+(function(){
+  if(typeof gtag!=='function')return;
+  document.querySelectorAll('a[href*="calendly.com"]').forEach(function(a){
+    a.addEventListener('click',function(){
+      gtag('event','book_call_click',{link_location:document.title});
+    });
+  });
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
+    a.addEventListener('click',function(){ gtag('event','email_click'); });
+  });
+})();
+</script>
+
+</body>
+</html>
