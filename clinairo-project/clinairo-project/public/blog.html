@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F86MY7M3YV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F86MY7M3YV');
+
+/* ---- analytics helper: window-scoped, dataLayer fallback, console confirmation ---- */
+window.claTrack = function(name, params){
+  params = params || {};
+  try{
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, params);
+    } else if (window.dataLayer) {
+      window.dataLayer.push(Object.assign({event: name}, params));
+    }
+    if (window.console && console.info) console.info('[Clinairo] event sent:', name, params);
+  }catch(e){ if(window.console) console.warn('[Clinairo] event failed:', name, e); }
+};
+</script>
+
+<title>Med Spa Growth & Patient Operations Blog | Clinairo</title>
+<meta name="description" content="Practical articles on med spa consultation conversion, patient follow-up, recall, no-shows and compliance — written for aesthetic practice owners.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Clinairo">
+<meta property="og:title" content="Med Spa Growth & Patient Operations Blog | Clinairo">
+<meta property="og:description" content="Practical articles on med spa consultation conversion, patient follow-up, recall, no-shows and compliance — written for aesthetic practice owners.">
+<meta property="og:url" content="https://www.clinairo.com/blog.html">
+<meta property="og:image" content="https://www.clinairo.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Med Spa Growth & Patient Operations Blog | Clinairo">
+<meta name="twitter:description" content="Practical articles on med spa consultation conversion, patient follow-up, recall, no-shows and compliance — written for aesthetic practice owners.">
+<meta name="twitter:image" content="https://www.clinairo.com/og-image.png">
+<link rel="canonical" href="https://www.clinairo.com/blog.html">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0A1420">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Clinairo Blog",
+  "url": "https://www.clinairo.com/blog.html",
+  "description": "Practical articles on med spa consultation conversion, follow-up, recall and compliance.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Clinairo",
+    "url": "https://www.clinairo.com/"
+  }
+}
+</script>
+<style>
+:root{
+  --navy:#0A1420; --navy-2:#0E1A2A; --navy-3:#132436; --raise:#1A2E44;
+  --text:#F0F5FA; --body:#B9C7D8; --dim:#8DA0B6; --faint:#6F8399;
+  --line:rgba(255,255,255,.10); --line-2:rgba(255,255,255,.18); --input:#132436;
+  --blue:#3E9DFF; --blue-hi:#5FAEFF; --blue-tint:rgba(62,157,255,.10);
+  --green:#34D399; --green-tint:rgba(52,211,153,.10); --warn:#F0A387;
+  --r-btn:10px; --r-sm:10px; --r:14px; --r-lg:20px; --r-pill:999px;
+  --maxw:1180px; --pad:26px;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+.light{
+  --navy:#F5F2ED; --navy-2:#FBF9F6; --navy-3:#FFFFFF; --raise:#EFEAE2;
+  --text:#111C28; --body:#4C5A6B; --dim:#5E6D7E; --faint:#8494A5;
+  --line:rgba(17,28,40,.11); --line-2:rgba(17,28,40,.22); --input:#FFFFFF;
+  --blue-tint:rgba(62,157,255,.09); --green-tint:rgba(52,211,153,.13);
+  background:var(--navy);color:var(--text);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--navy);color:var(--text);font-family:var(--sans);font-size:15.5px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img,svg,video{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+input,select,textarea{font-family:var(--sans);color:inherit}
+::selection{background:rgba(62,157,255,.3)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+h1,h2,h3,h4{font-weight:700;letter-spacing:-.028em;line-height:1.14;color:var(--text)}
+h1{font-size:clamp(31px,4.2vw,50px);line-height:1.08;letter-spacing:-.034em;font-weight:800}
+h2{font-size:clamp(24px,2.9vw,35px);letter-spacing:-.03em}
+h3{font-size:17px;line-height:1.32;letter-spacing:-.02em}
+p{color:var(--body)}
+.lead{font-size:16px;line-height:1.62;color:var(--body);max-width:58ch}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.hl{color:var(--blue)}
+.label{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.light h2,.light h3{font-weight:800}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 26px;border-radius:var(--r-btn);font-size:14.5px;font-weight:600;letter-spacing:-.005em;transition:transform .2s ease,box-shadow .2s ease,background .2s,border-color .2s,color .2s;border:1px solid transparent;white-space:nowrap}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-hi);transform:translateY(-1px);box-shadow:0 8px 20px rgba(62,157,255,.3)}
+.btn-green{background:var(--green);color:#06281D}
+.btn-green:hover{background:#48DDA6;transform:translateY(-1px);box-shadow:0 8px 20px rgba(52,211,153,.3)}
+.btn-ghost{background:transparent;border-color:var(--line-2);color:var(--text)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-1px)}
+.btn-sm{padding:10px 20px;font-size:13.5px}
+.btn-block{width:100%}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+header{position:sticky;top:0;z-index:100;background:rgba(10,20,32,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.hdr{max-width:var(--maxw);margin:0 auto;padding:11px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:9px;font-size:20px;font-weight:800;letter-spacing:-.04em;color:#F0F5FA}
+.logo .mark{width:27px;height:27px;border-radius:7px;background:#3E9DFF;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;font-weight:800}
+nav{display:flex;align-items:center;gap:17px}
+nav a{font-size:13.2px;font-weight:500;color:#8DA0B6;transition:color .2s;white-space:nowrap}
+nav a:hover{color:#F0F5FA}
+.burger{display:none;flex-direction:column;gap:5px;width:32px;height:32px;justify-content:center;align-items:center}
+.burger span{display:block;width:18px;height:2px;background:#F0F5FA;border-radius:2px;transition:transform .3s var(--ease),opacity .22s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+section{padding:86px 0;position:relative}
+.alt{background:var(--navy-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{max-width:62ch;margin-bottom:46px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head.center .lead{margin-left:auto;margin-right:auto}
+.sec-head h2{margin-bottom:14px}
+.crumb{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);margin-bottom:20px}
+.crumb a:hover{color:var(--blue)}
+.dark-panel{
+  --text:#F0F5FA; --body:#B9C7D8; --dim:#8DA0B6; --faint:#6F8399;
+  --line:rgba(255,255,255,.11); --line-2:rgba(255,255,255,.2);
+  --navy-2:#0E1A2A; --navy-3:#0A1420; --raise:#1A2E44; --input:#132436;
+  --green-tint:rgba(52,211,153,.12); --blue-tint:rgba(62,157,255,.12);
+  background:#0A1420;color:var(--text);border:1px solid rgba(255,255,255,.11);
+  border-radius:26px;position:relative;overflow:hidden;
+}
+.dark-panel::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform 1s var(--ease);z-index:3}
+.dark-panel.in::after{transform:scaleX(1)}
+.field{margin-bottom:17px}
+.field:last-child{margin-bottom:0}
+.field label{display:block;font-size:12.8px;font-weight:600;margin-bottom:7px}
+.field input,.field select,.field textarea{width:100%;padding:11px 14px;background:var(--input);border:1px solid var(--line-2);border-radius:var(--r-sm);font-size:14px;transition:border-color .25s,box-shadow .25s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(62,157,255,.16)}
+.field textarea{min-height:110px;resize:vertical;line-height:1.55}
+.field select option{background:var(--input);color:var(--text)}
+.formmsg{display:none;margin-top:14px;padding:12px 14px;font-size:12.8px;border-radius:var(--r-sm)}
+.formmsg.show{display:block}
+.formmsg.ok{background:var(--green-tint);border:1px solid rgba(52,211,153,.42);color:var(--green)}
+.formmsg.bad{background:rgba(240,163,135,.12);border:1px solid rgba(240,163,135,.42);color:var(--warn)}
+.cta{border-radius:26px;padding:48px;text-align:center}
+.cta h2{margin-bottom:12px}
+.cta p{max-width:52ch;margin:0 auto 26px}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.lightspace{padding:0 0 60px}
+.lightspace i{display:block;height:1px;background:linear-gradient(90deg,transparent,rgba(17,28,40,.16) 18%,rgba(17,28,40,.16) 82%,transparent)}
+.tailspace{padding:64px 0 0}
+.tailspace .rule{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+.tailspace .rule i{display:block;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.14) 18%,rgba(255,255,255,.14) 82%,transparent)}
+footer{background:#0A1420;border-top:1px solid rgba(255,255,255,.1);padding:58px 0 26px;color:#B9C7D8}
+.f-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:38px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1)}
+.f-brand p{font-size:12.8px;line-height:1.65;max-width:32ch;margin-top:13px;color:#8DA0B6}
+.f-col h4{font-family:var(--mono);font-size:9.8px;letter-spacing:.15em;text-transform:uppercase;color:#6F8399;margin-bottom:15px;font-weight:500}
+.f-col a{display:block;font-size:13.2px;color:#8DA0B6;margin-bottom:10px;transition:color .2s}
+.f-col a:hover{color:#3E9DFF}
+.f-bot{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding-top:22px;text-align:center}
+.f-badges{justify-content:center}
+.f-copy{font-family:var(--mono);font-size:10.2px;color:#6F8399;letter-spacing:.07em}
+.f-badges{display:flex;gap:9px;flex-wrap:wrap}
+.f-badge{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:9.8px;letter-spacing:.07em;color:#8DA0B6;border:1px solid rgba(255,255,255,.12);border-radius:var(--r-pill);padding:6px 12px}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (max-width:1040px){.f-top{grid-template-columns:1fr 1fr}}
+@media (max-width:800px){
+  :root{--pad:18px}
+  section{padding:60px 0}
+  nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#0A1420;border-bottom:1px solid rgba(255,255,255,.1);max-height:0;overflow:hidden;opacity:0;transition:max-height .34s var(--ease),opacity .28s}
+  nav.open{max-height:460px;opacity:1}
+  nav a{padding:14px var(--pad);border-bottom:1px solid rgba(255,255,255,.08);font-size:14.5px}
+  nav a.btn{margin:14px var(--pad);border-bottom:none;justify-content:center}
+  .burger{display:flex}
+}
+@media (max-width:600px){
+  h1{font-size:29px}h2{font-size:23px}.lead{font-size:15px}
+  .cta{padding:30px 22px;border-radius:20px}
+  .cta-row .btn{width:100%}
+  .f-top{grid-template-columns:1fr;gap:28px}
+  
+  .tailspace{padding:44px 0 0}
+  .lightspace{padding-bottom:40px}
+}
+
+/* ===== GLOBAL MOBILE SAFETY LAYER ===== */
+@media (max-width:600px){
+  html,body{max-width:100%;overflow-x:hidden}
+  img,video,svg,table,pre{max-width:100%}
+  h1,h2,h3{overflow-wrap:break-word;word-break:normal;hyphens:none}
+  .btn{max-width:100%}
+  .cta-row{width:100%}
+  .wrap>*{min-width:0}
+  /* never let a grid child force the page wider than the viewport */
+  [class*="grid"]>*,.bento>*,.tiers>*,.comp>*,.rel>*,.nots>*,.tiers-lite>*{min-width:0}
+}
+@media (max-width:400px){
+  :root{--pad:14px}
+  .btn{padding:12px 18px;font-size:13.5px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:34px}
+.filt{font-size:13px;font-weight:600;padding:9px 18px;border-radius:var(--r-pill);border:1px solid var(--line-2);color:var(--dim);transition:all .25s}
+.filt:hover{border-color:var(--blue);color:var(--blue)}
+.filt.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.feat-post{border-radius:26px;padding:38px;margin-bottom:16px;display:block}
+.feat-post .pill{font-family:var(--mono);font-size:9.8px;letter-spacing:.13em;text-transform:uppercase;padding:5px 12px;border-radius:var(--r-pill);background:var(--green-tint);border:1px solid rgba(52,211,153,.35);color:var(--green);font-weight:700}
+.feat-post h2{font-size:clamp(22px,2.6vw,30px);margin-bottom:12px;max-width:24ch}
+.feat-post p{font-size:15.5px;line-height:1.65;max-width:64ch;margin-bottom:18px}
+.feat-post .mins{display:block}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pc{background:var(--navy-3);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;transition:transform .4s var(--ease),border-color .35s}
+.pc:hover{transform:translateY(-4px);border-color:var(--line-2)}
+.pc .pill{font-family:var(--mono);font-size:9.8px;letter-spacing:.13em;text-transform:uppercase;padding:5px 12px;border-radius:var(--r-pill);background:var(--green-tint);border:1px solid rgba(52,211,153,.35);color:var(--green);font-weight:700}
+.pc h3{font-size:16.5px;line-height:1.35;margin-bottom:9px}
+.pc p{font-size:13.2px;line-height:1.6;color:var(--dim);flex:1;margin-bottom:16px}
+.pc .mins{padding-top:14px;border-top:1px solid var(--line)}
+.pc.hide{display:none}
+@media (max-width:1040px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.grid{grid-template-columns:1fr}.feat-post{padding:26px;border-radius:20px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hdr">
+    <a href="index.html" class="logo"><span class="mark">C</span>Clinairo</a>
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#audit">Free Audit Calculator</a>
+      <a href="features.html">Features</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn-primary btn-sm">Book Free Consultation</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section style="padding:52px 0 34px">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Blog</div>
+    <div class="label rv">Resources</div>
+    <h1 class="rv" style="max-width:22ch">Writing for People Who Run Aesthetic Practices.</h1>
+    <p class="lead rv" style="margin-top:18px;font-size:17px">Practical articles on consultation conversion, patient follow-up, recall and the operations behind them. Written for owners, not developers, and with the sources shown wherever a number appears.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="filters rv">
+      <button class="filt on" data-f="all">All</button>
+      <button class="filt" data-f="Revenue">Revenue</button>
+      <button class="filt" data-f="Operations">Operations</button>
+      <button class="filt" data-f="Comparison">Comparison</button>
+      <button class="filt" data-f="Guide">Guide</button>
+      <button class="filt" data-f="Compliance">Compliance</button>
+    </div>
+
+    <a class="feat-post dark-panel rv" href="blog-med-spa-consultation-conversion-rate.html">
+      <span class="pill">Revenue</span>
+      <h2>Med Spa Consultation Conversion Rate: What's Normal and What's Fixable</h2>
+      <p>What a healthy consultation-to-treatment conversion rate looks like for a medical spa, how to measure yours properly, and which part of the gap is actually recoverable.</p>
+      <span class="mins">9 min read &nbsp;&middot;&nbsp; Read article &rarr;</span>
+    </a>
+
+    <div class="grid" id="grid">
+      <a class="pc" data-cat="Revenue" href="blog-med-spa-follow-up-system.html"><span class="pill">Revenue</span><h3>Building a Med Spa Follow-Up System That Doesn't Annoy Patients</h3><p>How to structure follow-up after an aesthetic consultation so it reads as helpful rather than pushy — sequencing, timing, and what never to lead with.</p><span class="mins">8 min read</span></a>
+      <a class="pc" data-cat="Operations" href="blog-reduce-med-spa-no-show-rate.html"><span class="pill">Operations</span><h3>How to Reduce Your Med Spa No-Show Rate Without Being Difficult About It</h3><p>Deposits, reminder cadence and no-show rescue for aesthetic practices — what actually moves the number, and what just irritates good patients.</p><span class="mins">7 min read</span></a>
+      <a class="pc" data-cat="Comparison" href="blog-ai-receptionist-for-med-spas.html"><span class="pill">Comparison</span><h3>AI Receptionist for Med Spas: What to Check Before You Buy One</h3><p>AI phone answering for medical spas is now a crowded category. The questions that separate a useful system from an expensive voicemail replacement.</p><span class="mins">9 min read</span></a>
+      <a class="pc" data-cat="Revenue" href="blog-med-spa-lead-response-time.html"><span class="pill">Revenue</span><h3>Med Spa Lead Response Time: Why Minutes Decide the Booking</h3><p>Why aesthetic inquiries go cold faster than most owners expect, where the delay actually comes from, and how to fix it without hiring.</p><span class="mins">7 min read</span></a>
+      <a class="pc" data-cat="Revenue" href="blog-med-spa-patient-lifetime-value.html"><span class="pill">Revenue</span><h3>Med Spa Patient Lifetime Value: How to Calculate Yours Properly</h3><p>Why generic lifetime value benchmarks mislead aesthetic practices, and how to work out the number that should actually drive your acquisition budget.</p><span class="mins">8 min read</span></a>
+      <a class="pc" data-cat="Operations" href="blog-botox-patient-recall-system.html"><span class="pill">Operations</span><h3>Botox Patient Recall: Reaching Patients Before the Treatment Wears Off</h3><p>Treatment-cycle recall for neurotoxin, filler and laser patients — timing, segmentation, and why generic reactivation blasts underperform.</p><span class="mins">7 min read</span></a>
+      <a class="pc" data-cat="Guide" href="blog-med-spa-booking-software-api-access.html"><span class="pill">Guide</span><h3>Med Spa Booking Software and API Access: What Integrators Don't Tell You</h3><p>Why an AI vendor's promise to integrate with your booking platform depends on your subscription tier — and the questions to ask before you sign.</p><span class="mins">8 min read</span></a>
+      <a class="pc" data-cat="Compliance" href="blog-hipaa-compliant-ai-for-med-spas.html"><span class="pill">Compliance</span><h3>HIPAA Compliant AI for Med Spas: What the Badge Doesn't Tell You</h3><p>How to evaluate a vendor's HIPAA claims, which agreements actually need to exist, and the questions that separate documentation from decoration.</p><span class="mins">9 min read</span></a>
+      <a class="pc" data-cat="Compliance" href="blog-tcpa-compliance-patient-text-messages.html"><span class="pill">Compliance</span><h3>Texting Your Patients: The Consent Rules Aesthetic Practices Keep Missing</h3><p>Consent, contact hours, opt-outs and suppression — the practical controls a med spa needs before automating patient messaging.</p><span class="mins">8 min read</span></a>
+      <a class="pc" data-cat="Revenue" href="blog-med-spa-cost-per-lead-benchmarks.html"><span class="pill">Revenue</span><h3>Med Spa Cost Per Lead: Why the Number Alone Tells You Nothing</h3><p>How to read acquisition cost properly for an aesthetic practice, and why cutting cost per lead can quietly make your economics worse.</p><span class="mins">7 min read</span></a>
+      <a class="pc" data-cat="Operations" href="blog-med-spa-front-desk-staffing.html"><span class="pill">Operations</span><h3>Med Spa Front Desk Staffing: What to Automate and What to Never Automate</h3><p>Where automation genuinely helps an aesthetic practice's front desk, where it damages the patient experience, and how to draw the line.</p><span class="mins">7 min read</span></a>
+      <a class="pc" data-cat="Revenue" href="blog-handling-price-objections-aesthetic-consultations.html"><span class="pill">Revenue</span><h3>Handling Price Objections After an Aesthetic Consultation</h3><p>What to do when a patient says the treatment costs more than she expected — during the consultation and in the days after it.</p><span class="mins">7 min read</span></a>
+      <a class="pc" data-cat="Revenue" href="blog-med-spa-patient-reactivation-campaign.html"><span class="pill">Revenue</span><h3>Med Spa Patient Reactivation: Turning a Dormant List Into Bookings</h3><p>How to segment and reactivate lapsed aesthetic patients without burning your list — and why most reactivation blasts underperform.</p><span class="mins">7 min read</span></a>
+      <a class="pc" data-cat="Operations" href="blog-glp1-clinic-patient-retention.html"><span class="pill">Operations</span><h3>GLP-1 Programmes in Med Spas: The Retention Problem Nobody Plans For</h3><p>Weight-loss programmes bring high-frequency patients into aesthetic practices. Keeping them requires a different operational rhythm from injectables.</p><span class="mins">8 min read</span></a>
+      <a class="pc" data-cat="Guide" href="blog-med-spa-kpis-worth-tracking.html"><span class="pill">Guide</span><h3>The Seven Med Spa KPIs Worth Tracking (And the Ones to Ignore)</h3><p>A short list of metrics that actually change decisions in an aesthetic practice, how to calculate each, and which popular numbers are noise.</p><span class="mins">8 min read</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="light" style="padding-top:64px">
+  <div class="wrap">
+    <div class="lightspace"><i></i></div>
+    <div class="cta dark-panel rv">
+      <div class="label">Start Here</div>
+      <h2>See What Your Consultations Are Worth</h2>
+      <p>Five numbers you already know, and the one figure nobody has shown you. Takes about forty seconds.</p>
+      <div class="cta-row">
+        <a href="index.html#audit" class="btn btn-primary">Run My Consult Audit</a>
+        <a href="https://calendly.com/contact-clinairo/30min" target="_blank" rel="noopener" class="btn btn-ghost">Book 30 Minutes</a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="tailspace"><div class="rule"><i></i></div></div>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-brand">
+        <div class="logo"><span class="mark">C</span>Clinairo</div>
+        <p>AI patient revenue operations for medical spas and aesthetic practices. Capture, protect and recover consultations &mdash; and measure the revenue that comes back.</p>
+      </div>
+      <div class="f-col"><h4>Product</h4><a href="features.html">Features</a><a href="index.html#system">How it works</a><a href="index.html#recovery">Consult recovery</a><a href="index.html#pricing">Pricing</a><a href="index.html#audit">Free audit</a></div>
+      <div class="f-col"><h4>Proof</h4><a href="case-studies.html">Case studies</a><a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a></div>
+      <div class="f-col"><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy policy</a><a href="terms.html">Terms</a></div>
+    </div>
+    <div class="f-bot">
+      <div class="f-copy">&copy; 2026 CLINAIRO AUTOMATION INC.</div>
+      <div class="f-badges">
+        <span class="f-badge">&#128737; HIPAA COMPLIANT</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+(function(){
+  var b=document.getElementById('burger'),n=document.getElementById('nav');
+  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.classList.toggle('open',o);b.setAttribute('aria-expanded',o);});
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){
+    n.classList.remove('open');b.classList.remove('open');b.setAttribute('aria-expanded','false');});});
+})();
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  var panels=[].slice.call(document.querySelectorAll('.dark-panel'));
+  if(REDUCED||!('IntersectionObserver' in window)){
+    els.forEach(function(e){e.classList.add('in');});
+    panels.forEach(function(p){p.classList.add('in');});
+    return;
+  }
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){
+    if(!e.isIntersecting)return;
+    var sibs=[].slice.call(e.target.parentNode.children).filter(function(c){return c.classList.contains('rv');});
+    e.target.style.transitionDelay=Math.min(Math.max(0,sibs.indexOf(e.target))*80,320)+'ms';
+    e.target.classList.add('in');io.unobserve(e.target);
+  });},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e);});
+  var io2=new IntersectionObserver(function(en){en.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('in');io2.unobserve(e.target);}
+  });},{threshold:.15});
+  panels.forEach(function(p){io2.observe(p);});
+})();
+</script>
+<script>
+(function(){
+  var btns=[].slice.call(document.querySelectorAll('.filt'));
+  var cards=[].slice.call(document.querySelectorAll('.pc'));
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.classList.remove('on');});
+      b.classList.add('on');
+      var f=b.dataset.f;
+      cards.forEach(function(c){
+        c.classList.toggle('hide', f!=='all' && c.dataset.cat!==f);
+      });
+    });
+  });
+})();
+
+/* ---- analytics events ---- */
+(function(){
+  
+  document.querySelectorAll('a[href*="calendly.com"]').forEach(function(a){
+    a.addEventListener('click',function(){
+      window.claTrack('book_call_click',{link_location:document.title});
+    });
+  });
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
+    a.addEventListener('click',function(){ window.claTrack('email_click',{}); });
+  });
+})();
+</script>
+
+</body>
+</html>
