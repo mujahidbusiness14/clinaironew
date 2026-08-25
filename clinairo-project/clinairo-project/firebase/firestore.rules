@@ -1,0 +1,91 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function isAdmin() {
+      return isSignedIn()
+        && request.auth.token.email == "mujahidbusiness14@gmail.com"
+        && request.auth.token.email_verified == true;
+    }
+
+    // ---------------------------------------------------------------
+    // Consultation requests — UNCHANGED from your existing rules.
+    // The site still sends exactly these six fields.
+    // ---------------------------------------------------------------
+    match /consultation_requests/{requestId} {
+      allow create: if isValidConsultationRequest(incoming());
+      allow get, list: if isAdmin();
+      allow update, delete: if isAdmin();
+    }
+
+    function isValidConsultationRequest(data) {
+      return data.keys().hasAll(['name', 'clinicName', 'email', 'phone', 'message', 'createdAt'])
+        && data.keys().size() == 6
+        && data.name is string && data.name.size() > 0 && data.name.size() <= 100
+        && data.clinicName is string && data.clinicName.size() > 0 && data.clinicName.size() <= 100
+        && data.email is string && data.email.size() > 0 && data.email.size() <= 100
+        && data.phone is string && data.phone.size() > 0 && data.phone.size() <= 20
+        && data.message is string && data.message.size() > 0 && data.message.size() <= 2000
+        && data.createdAt == request.time;
+    }
+
+    // ---------------------------------------------------------------
+    // Audit submissions — REPLACED.
+    // The old schema was built for the missed-call calculator
+    // (weeklyCalls / missedPct / afterHoursCalls / apptValue / convRate).
+    // The new consult economics audit collects different inputs, so the
+    // validator below replaces the old one entirely. Still anonymous:
+    // no name, email, or phone is ever written to this collection.
+    // ---------------------------------------------------------------
+    match /audit_submissions/{submissionId} {
+      allow create: if isValidAuditSubmission(incoming());
+      allow get, list: if isAdmin();
+      allow update, delete: if isAdmin();
+    }
+
+    function isValidAuditCore(data) {
+      return data.keys().hasAll([
+          'adSpend', 'consultsBooked', 'consultsShowed', 'consultsClosed',
+          'avgPatientValue', 'costPerConsult', 'noShowCost',
+          'undecidedCount', 'undecidedValue', 'annualRecoverable', 'submittedAt'
+        ])
+        && data.adSpend is number          && data.adSpend >= 0          && data.adSpend <= 10000000
+        && data.consultsBooked is number   && data.consultsBooked >= 0   && data.consultsBooked <= 100000
+        && data.consultsShowed is number   && data.consultsShowed >= 0   && data.consultsShowed <= 100000
+        && data.consultsClosed is number   && data.consultsClosed >= 0   && data.consultsClosed <= 100000
+        && data.avgPatientValue is number  && data.avgPatientValue >= 0  && data.avgPatientValue <= 1000000
+        && data.costPerConsult is number   && data.costPerConsult >= 0
+        && data.noShowCost is number       && data.noShowCost >= 0
+        && data.undecidedCount is number   && data.undecidedCount >= 0
+        && data.undecidedValue is number   && data.undecidedValue >= 0
+        && data.annualRecoverable is number && data.annualRecoverable >= 0
+        && data.submittedAt == request.time;
+    }
+
+    function isValidAuditSubmission(data) {
+      return isValidAuditCore(data)
+        && (
+          data.keys().size() == 11
+          || (
+            data.keys().size() == 12
+            && data.keys().hasAll(['source'])
+            && data.source is string
+            && data.source.size() <= 60
+          )
+        );
+    }
+  }
+}
